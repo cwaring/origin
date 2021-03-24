@@ -4,6 +4,8 @@
 
 The web3 static application toolkit ⚡️
 
+***status: wip alpha stack 🐉***
+
 ## Motivation
 Building modern web3 applications should be simple elegant and fast, this starter kit is an attempt to solve that problem with an opinionated base configuration to help make best practices accessible and improve productivity.
 
@@ -15,8 +17,8 @@ The production build uses rollup and generates output with relative paths so the
 - Vite 2.x with Vue 3 & Typescript
 - Auto component importing ([`vite-plugin-components`](https://github.com/antfu/vite-plugin-components))
 - File based routing ([`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages))
-- Layout sub system ()
-- i18n ready
+- Layout sub system ([`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts))
+- i18n
 - PostCSS
 - SSR
 - ESLint
