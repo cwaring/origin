@@ -13,11 +13,12 @@ The production build uses rollup and generates output with relative paths so the
 
 ## Core Features 
 - Vite 2.x with Vue 3 & Typescript
-- Auto component importing
-- File based routing
-- Layout system
+- Auto component importing ([`vite-plugin-components`](https://github.com/antfu/vite-plugin-components))
+- File based routing ([`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages))
+- Layout sub system ()
 - i18n ready
 - PostCSS
+- SSR
 - ESLint
 
 ## Optional extensions 
