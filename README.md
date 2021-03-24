@@ -2,14 +2,14 @@
 
 # Origin Kit
 
-The web3 static application toolkit ⚡️
+The fast web3 application toolkit ⚡️
 
-***status: wip alpha stack 🐉***
+***status: wip alpha warning 🐉***
 
 ## Motivation
-Building modern web3 applications should be simple elegant and fast, this starter kit is an attempt to solve that problem with an opinionated base configuration to help make best practices accessible and improve productivity.
+Building modern web3 applications should be simple elegant and fast, this starter kit is an attempt to solve that problem with an opinionated base configuration to help make best practices accessible and fast.
 
-The kit builds upon Vite 2.x with Vue 3 and Typescript, resulting in esmodules served directly to the browser and < 300ms hot reloading time with presevation of application state between updates.
+The kit builds upon Vite 2.x defaults with Vue 3 and Typescript, resulting in esmodules served directly to the browser and < 300ms hot reloading time with presevation of application state between updates.
 
 The production build uses rollup and generates output with relative paths so the compiled application will load via both root and subpath domains, suitable for deploying to IPFS and loading on the dweb.
 
@@ -17,21 +17,37 @@ The production build uses rollup and generates output with relative paths so the
 - Vite 2.x with Vue 3 & Typescript
 - Auto component importing ([`vite-plugin-components`](https://github.com/antfu/vite-plugin-components))
 - File based routing ([`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages))
-- Layout sub system ([`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts))
-- i18n
-- PostCSS
-- SSR
-- ESLint
+- Layout sub-system ([`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts))
+- i18n @TODO
+- PostCSS @TODO
+- SSR @TODO
+- ESLint @TODO
 
-## Optional extensions 
+## Extensions 
 - Markdown support
+- VueX store with modules
 - Tailwind 2.x
 - PWA
-- Zero import iconography
 
 ---
 
-## Recommended IDE Setup
+## Development
+
+```bash
+# start development mode
+npm run dev
+```
+
+```bash
+# production build /dist
+npm run build
+```
+
+```bash
+# preview production build /dist
+npm run serve
+```
+### Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
 
