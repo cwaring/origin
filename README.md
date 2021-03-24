@@ -24,10 +24,10 @@ The production build uses rollup and generates output with relative paths so the
 - ESLint @TODO
 
 ## Extensions
-- Markdown support
-- VueX store with modules
-- Tailwind 2.x
-- PWA
+- Markdown support @TODO
+- Vuex store with modules @TODO
+- Tailwind 2.x @TODO
+- PWA @TODO
 
 ---
 
