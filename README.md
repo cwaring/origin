@@ -7,11 +7,11 @@ The fast web3 application toolkit ⚡️
 ***status: wip alpha warning 🐉***
 
 ## Motivation
-Building modern web3 applications should be simple elegant and fast, this starter kit is an attempt to solve that problem with an opinionated base configuration to help make best practices accessible and fast.
+Building modern web3 applications should be simple elegant and fast, this starter kit is an attempt to solve that problem with an opinionated base configuration to help promote best practices.
 
 The kit builds upon Vite 2.x defaults with Vue 3 and Typescript, resulting in esmodules served directly to the browser and < 300ms hot reloading time with presevation of application state between updates.
 
-The production build uses rollup and generates output with relative paths so the compiled application will load via both root and subpath domains, suitable for deploying to IPFS and loading on the dweb.
+The production build uses rollup and generates output with relative paths so the compiled application will load via both root and subpath domains, suitable for deploying to IPFS and loading on the decentralized web.
 
 ## Core Features 
 - Vite 2.x with Vue 3 & Typescript
@@ -23,7 +23,7 @@ The production build uses rollup and generates output with relative paths so the
 - SSR @TODO
 - ESLint @TODO
 
-## Extensions 
+## Extensions
 - Markdown support
 - VueX store with modules
 - Tailwind 2.x
