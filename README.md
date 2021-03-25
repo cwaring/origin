@@ -18,8 +18,11 @@ The production build uses rollup and generates output with relative paths so the
 - Auto component importing ([`vite-plugin-components`](https://github.com/antfu/vite-plugin-components))
 - File based routing ([`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages))
 - Layout sub-system ([`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts))
+- PostCSS ([`postcss.config.js`](https://vitejs.dev/guide/features.html#postcss))
+  - [`postcss-modules`](https://github.com/madyankin/postcss-modules)
+  - [`postcss-nested`](https://github.com/postcss/postcss-nested)
+  - [`autoprefixer`](https://github.com/postcss/autoprefixer)
 - i18n @TODO
-- PostCSS @TODO
 - SSR @TODO
 - ESLint @TODO
 
