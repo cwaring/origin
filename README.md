@@ -22,9 +22,9 @@ The production build uses rollup and generates output with relative paths so the
   - [`postcss-modules`](https://github.com/madyankin/postcss-modules)
   - [`postcss-nested`](https://github.com/postcss/postcss-nested)
   - [`autoprefixer`](https://github.com/postcss/autoprefixer)
+- ESLint & Prettier ([`.eslintrc.js`](.eslintrc.js))
 - i18n @TODO
 - SSR @TODO
-- ESLint @TODO
 
 ## Testing
 - Jest (unit) @TODO
