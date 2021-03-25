@@ -30,9 +30,11 @@ The production build uses rollup and generates output with relative paths so the
 - Jest (unit) @TODO
 - Cypress (e2e) @TODO
 
-## Extensions
-- Markdown support @TODO
+## Plugins
+- Distributed identity provider @TODO
+- Offline first database @TODO
 - Vuex store with modules @TODO
+- Markdown pages/imports @TODO
 - Tailwind 2.x @TODO
 - PWA @TODO
 
