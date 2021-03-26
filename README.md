@@ -10,7 +10,7 @@ _The fast web3 application toolkit ⚡️_
 
 ***status: WIP alpha warning 🐉***
 ## Motivation
-Building modern web3 applications should be simple, elegant and fast, **Origin** is an attempt to solve that problem with a focus to promote best practices in a lightweight, opinionated base configuration package.
+Building modern web3 applications should be simple, elegant and fast, **Origin** is an attempt to solve that problem with a focus to promote best practices in a lightweight, opinionated base configuration.
 
 Origin builds upon [Vite 2](https://vitejs.dev/) defaults with [Vue 3](https://v3.vuejs.org/) and [Typescript](https://www.typescriptlang.org/), resulting in ESmodules served directly to the browser and < 300ms hot reloading time with preservation of application state between updates.
 
