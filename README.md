@@ -16,10 +16,10 @@ Origin builds upon [Vite 2](https://vitejs.dev/) defaults with [Vue 3](https://v
 
 The production build uses [rollup](https://rollupjs.org/guide/en/) to generate an optimized output with relative paths so the compiled application will load via both root and subpath domains, suitable for deploying to [IPFS](https://ipfs.io/) and loading natively on the decentralized web.
 
-We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/api-plugin.html) to provide a selection of essential web3 tools/apis for the purpose of plug and play integration with web3 wallets, storage, distributed identity along with other general design productivity frameworks.
+We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/api-plugin.html) to provide a selection of essential web3 tools/apis for the purpose of plug and play integration with web3 wallets, storage, distributed identity along with other general ui/design productivity frameworks.
 
 ## Core Features 
-- Vite 2.x with Vue 3 & Typescript
+- [Vite 2.x](https://vitejs.dev/) with [Vue 3](https://v3.vuejs.org/) & [Typescript](https://www.typescriptlang.org/)
 - Auto component importing ([`vite-plugin-components`](https://github.com/antfu/vite-plugin-components))
 - File based routing ([`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages))
 - Layout sub-system ([`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts))
