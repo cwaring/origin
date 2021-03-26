@@ -1,14 +1,14 @@
 <img src='./src/assets/origin-logo.svg' width='128' height='128' alt='origin' />
 
-# Origin Kit
+# Origin
 
-The fast web3 application toolkit ⚡️
+_The fast web3 application toolkit ⚡️_
 
-***STATUS: WIP alpha warning 🐉***
 
 [![node compatility](https://img.shields.io/node/v/vite.svg)](https://nodejs.org/en/about/releases/)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
+***status: WIP alpha warning 🐉***
 ## Motivation
 Building modern web3 applications should be simple, elegant and fast, **Origin** is an attempt to solve that problem with an opinionated base configuration and a focus to promote best practices and productivity in a lightweight package.
 
