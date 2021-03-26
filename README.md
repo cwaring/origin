@@ -4,14 +4,19 @@
 
 The fast web3 application toolkit ⚡️
 
-***status: wip alpha warning 🐉***
+***STATUS: WIP alpha warning 🐉***
+
+[![node compatility](https://img.shields.io/node/v/vite.svg)](https://nodejs.org/en/about/releases/)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 ## Motivation
-Building modern web3 applications should be simple, elegant and fast, this starter kit is an attempt to solve that problem with an opinionated base configuration to promote best practices and productivity.
+Building modern web3 applications should be simple, elegant and fast, **Origin** is an attempt to solve that problem with an opinionated base configuration and a focus to promote best practices and productivity in a lightweight package.
 
-The kit builds upon Vite 2.x defaults with Vue 3 and Typescript, resulting in esmodules served directly to the browser and < 300ms hot reloading time with presevation of application state between updates.
+Origin builds upon [Vite 2](https://vitejs.dev/) defaults with [Vue 3](https://v3.vuejs.org/) and [Typescript](https://www.typescriptlang.org/), resulting in ESmodules served directly to the browser and < 300ms hot reloading time with presevation of application state between updates.
 
-The production build uses rollup and generates output with relative paths so the compiled application will load via both root and subpath domains, suitable for deploying to IPFS and loading on the decentralized web.
+The production build uses [rollup](https://rollupjs.org/guide/en/) to generate an optimized output with relative paths so the compiled application will load via both root and subpath domains, suitable for deploying to [IPFS](https://ipfs.io/) and loading natively on the decentralized web.
+
+We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/api-plugin.html) to provide a selection of essential web3 tools/apis for the purpose of plug and play integration with web3 wallets, storage, distributed identity along with other general design productivity frameworks.
 
 ## Core Features 
 - Vite 2.x with Vue 3 & Typescript
@@ -43,7 +48,9 @@ The production build uses rollup and generates output with relative paths so the
 ## Development
 
 ```bash
-# start development mode
+# 0: install deps
+npm i
+# 1: start development mode
 npm run dev
 ```
 
