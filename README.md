@@ -69,6 +69,6 @@ npm run serve
 
 This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which currently in RFC stage. However, be sure to disable Vetur if you have it installed as these extensions conflict.
 
-## Type Support For `.vue` Imports in TS
+### Type Support For `.vue` Imports in TS
 
 If you are using Volar the default configuration included in Origin enables prop types for `.vue` imports. You can toggle this by selecting `Volar: Switch TS Plugin on/off` from the VSCode command palette.
