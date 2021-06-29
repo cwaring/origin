@@ -1,6 +1,6 @@
 {
   "name": "origin",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -8,6 +8,7 @@
     "lint": "eslint '**/*.{js,ts,tsx,vue}' --quiet --fix"
   },
   "dependencies": {
+    "ipfs-base": "^1.1.0-beta.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.5"
   },
