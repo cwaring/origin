@@ -38,7 +38,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 ## Plugins
 - Distributed identity provider @TODO
 - Offline first database @TODO
-- Vuex store with modules @TODO
+- Pina store with modules @TODO
 - Markdown pages/imports @TODO
 - Tailwind 2.x @TODO
 - PWA @TODO
@@ -67,7 +67,7 @@ npm run serve
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which currently in RFC stage. However, be sure to disable Vetur if you have it installed as these extensions conflict.
+This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which in now included in Vue v3.1.4. However, be sure to disable Vetur if you have it installed as these extensions conflict.
 
 ### Type Support For `.vue` Imports in TS
 
