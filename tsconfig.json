@@ -5,7 +5,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -13,16 +12,24 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "types": [
-      "@types/node",
       "vite/client",
       "vite-plugin-vue-layouts/client",
       "vite-plugin-pages/client"
     ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "exclude": ["dist", "node_modules", "public"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "public"
+  ]
 }
