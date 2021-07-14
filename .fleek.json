@@ -1,0 +1,7 @@
+{
+  "build": {
+    "image": "node:slim",
+    "command": "npm i && npm run build",
+    "publicDir": "dist"
+  }
+}
