@@ -13,7 +13,12 @@ export default defineConfig({
       '@/': `${path.resolve(__dirname, 'src')}/`
     }
   },
-  plugins: [Vue(), ViteComponents(), Pages(), Layouts()],
+  plugins: [
+    Vue(),
+    ViteComponents({ globalComponentsDeclaration: true }),
+    Pages(),
+    Layouts()
+  ],
 
   ssgOptions: {
     script: 'async',
