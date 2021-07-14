@@ -3,21 +3,23 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "NODE_ENV=production vite-ssg build",
     "serve": "vite preview",
     "lint": "eslint '**/*.{js,ts,tsx,vue}' --quiet --fix"
   },
   "dependencies": {
     "@vueuse/core": "^5.1.3",
+    "@vueuse/head": "^0.5.1",
     "ipfs-base": "^1.1.0-beta.1",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.5"
+    "vue-router": "^4.0.10"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
     "@vitejs/plugin-vue": "^1.2.5",
     "@vue/compiler-sfc": "^3.1.4",
+    "@vue/server-renderer": "^3.1.4",
     "autoprefixer": "^10.3.1",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
@@ -36,6 +38,7 @@
     "vite-plugin-components": "^0.12.2",
     "vite-plugin-pages": "^0.15.0",
     "vite-plugin-vue-layouts": "^0.3.1",
+    "vite-ssg": "^0.11.4",
     "vue-eslint-parser": "^7.8.0",
     "vue-tsc": "^0.2.0"
   }
