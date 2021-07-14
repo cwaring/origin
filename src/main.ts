@@ -1,6 +1,5 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import { createBase } from 'ipfs-base'
-import { createRouter, createWebHistory } from 'vue-router'
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'layouts-generated'
 
@@ -8,9 +7,13 @@ import App from './App.vue'
 
 const routes = setupLayouts(generatedRoutes)
 
-const router = createRouter({
-  history: createWebHistory(createBase()),
-  routes
-})
-
-createApp(App).use(router).mount('#app')
+export const createApp = ViteSSG(
+  // root component
+  App,
+  // vue-router options with ipfs-base
+  { routes, base: createBase() },
+  // function to have custom setups
+  ({ app, router, routes, isClient, initialState }) => {
+    // install plugins etc.
+  }
+)
