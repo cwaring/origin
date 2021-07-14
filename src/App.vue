@@ -2,11 +2,13 @@
   <router-view />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { useHead } from '@vueuse/head'
 
-export default defineComponent({
-  name: 'App'
+// https://github.com/vueuse/head
+useHead({
+  title: 'Origin App',
+  meta: [{ name: 'description', content: 'Origin web3 starter' }]
 })
 </script>
 
