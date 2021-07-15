@@ -8,6 +8,6 @@ export type OriginPlugin = (ctx: ViteSSGContext) => void
  * @param ctx ViteSSGContext
  */
 export const usePlugins = (ctx: ViteSSGContext): void => {
-  const modules = import.meta.globEager(`./!(index)*.ts`)
+  const modules = import.meta.globEager(`./*/index.ts`)
   Object.values(modules).map((plugin) => plugin.install?.(ctx))
 }
