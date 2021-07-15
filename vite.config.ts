@@ -25,6 +25,12 @@ export default defineConfig({
     formatting: 'minify'
   },
 
+  server: {
+    fs: {
+      strict: true
+    }
+  },
+
   optimizeDeps: {
     include: ['vue', 'vue-router', '@vueuse/core'],
     exclude: ['vue-demi']
