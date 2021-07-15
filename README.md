@@ -28,20 +28,20 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
   - [`postcss-nested`](https://github.com/postcss/postcss-nested)
   - [`autoprefixer`](https://github.com/postcss/autoprefixer)
 - ESLint & Prettier ([`.eslintrc.js`](.eslintrc.js))
-- i18n @TODO
-- SSR @TODO
+- Server Side Page Generation [`vite-ssg`](https://github.com/antfu/vite-ssg)
+  - Metadata rendering with [`@vueuse/head`](https://github.com/vueuse/head)
+- i18n //TODO
 
 ## Testing
-- Jest (unit) @TODO
-- Cypress (e2e) @TODO
+- [Playwright](https://playwright.dev/) (e2e) //TODO
 
-## Plugins
-- Distributed identity provider @TODO
-- Offline first database @TODO
-- Pina store with modules @TODO
-- Markdown pages/imports @TODO
-- Tailwind 2.x @TODO
-- PWA @TODO
+## Vue Plugins
+- Distributed identity provider //TODO [#6](https://github.com/application-research/origin/issues/6)
+- Pina store with modules //TODO [#7](https://github.com/application-research/origin/issues/7)
+- Offline first database //TODO
+## Vite Plugins
+- Tailwind 2.x //TODO
+- Markdown pages/imports //TODO
 
 ---
 
@@ -67,7 +67,7 @@ npm run serve
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which in now included in Vue v3.1.4. However, be sure to disable Vetur if you have it installed as these extensions conflict.
+This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which is included in Vue v3.1.4. However, be sure to disable Vetur if you have it installed as these extensions conflict.
 
 ### Type Support For `.vue` Imports in TS
 
