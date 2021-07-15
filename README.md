@@ -31,6 +31,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 - Server Side Page Generation [`vite-ssg`](https://github.com/antfu/vite-ssg)
   - Metadata rendering with [`@vueuse/head`](https://github.com/vueuse/head)
 - i18n //TODO
+- Markdown pages/imports //TODO
 
 ## Testing
 - [Playwright](https://playwright.dev/) (e2e) //TODO
@@ -41,7 +42,6 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 - Offline first database //TODO
 ## Vite Plugins
 - Tailwind 2.x //TODO
-- Markdown pages/imports //TODO
 
 ---
 
