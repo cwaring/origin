@@ -17,6 +17,10 @@
   "workspaces": [
     "./src/plugins/*"
   ],
+  "engines": {
+    "npm": ">=7",
+    "node": ">=12"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
