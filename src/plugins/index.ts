@@ -9,7 +9,7 @@ export type OriginPlugin = (ctx: ViteSSGContext) => void
  */
 export const usePlugins = (ctx: ViteSSGContext): void => {
   const modules = import.meta.glob(`./*/index.ts`)
-  const enabled = /pina/
+  const enabled = /origin-plugin-pina/
 
   for (const [path, plugin] of Object.entries(modules)) {
     if (path.match(enabled)) {

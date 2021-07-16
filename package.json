@@ -1,6 +1,7 @@
 {
   "name": "origin-vue-ts",
-  "version": "0.1.0",
+  "private": true,
+  "version": "0.2.0",
   "scripts": {
     "dev": "vite",
     "build": "NODE_ENV=production vite-ssg build",

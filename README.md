@@ -27,6 +27,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
   - [`postcss-modules`](https://github.com/madyankin/postcss-modules)
   - [`postcss-nested`](https://github.com/postcss/postcss-nested)
   - [`autoprefixer`](https://github.com/postcss/autoprefixer)
+- IPFS Base (auto gateway detection) [`ipfs-base`](https://github.com/cwaring/ipfs-base)
 - ESLint & Prettier ([`.eslintrc.js`](.eslintrc.js))
 - Server Side Page Generation [`vite-ssg`](https://github.com/antfu/vite-ssg)
   - Metadata rendering with [`@vueuse/head`](https://github.com/vueuse/head)
@@ -37,8 +38,8 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 - [Playwright](https://playwright.dev/) (e2e) //TODO
 
 ## Vue Plugins
+- Pina store with modules (WIP) [`origin-plugin-pina`](./src/plugins/origin-plugin-pina/)
 - Distributed identity provider //TODO [#6](https://github.com/application-research/origin/issues/6)
-- Pina store with modules //TODO [#7](https://github.com/application-research/origin/issues/7)
 - Offline first database //TODO
 ## Vite Plugins
 - Tailwind 2.x //TODO
