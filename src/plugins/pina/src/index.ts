@@ -1,7 +1,6 @@
 import { createPinia } from 'pinia'
-import { OriginPlugin } from '@/plugins'
 
-export const install: OriginPlugin = ({ app }) => {
+export const install: any = ({ app }) => {
   app.use(createPinia())
   console.log('🍍 pina running')
 }

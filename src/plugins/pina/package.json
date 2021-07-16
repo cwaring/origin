@@ -1,8 +1,12 @@
 {
   "name": "origin-plugin-pina",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "vue pina plugin example",
-  "main": "index.ts",
+  "module": "./dist/index.js",
+  "scripts": {
+    "build": "npx tsup@latest src/index.ts",
+    "watch": "npm run build -- --watch"
+  },
   "author": "cwaring",
   "license": "MIT",
   "dependencies": {

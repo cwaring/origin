@@ -1,0 +1,11 @@
+{
+  "name": "origin-vue-plugins",
+  "version": "0.1.0",
+  "description": "origin plugins",
+  "module": "index.ts",
+  "author": "cwaring",
+  "license": "MIT",
+  "dependencies": {
+    "origin-plugin-pina": "file:pina"
+  }
+}
