@@ -9,6 +9,7 @@
     "lint": "eslint '**/*.{js,ts,tsx,vue}' --quiet --fix"
   },
   "dependencies": {
+    "@nuxt/devalue": "^2.0.0",
     "@vueuse/core": "^5.1.4",
     "@vueuse/head": "^0.5.1",
     "ipfs-base": "^1.1.0",

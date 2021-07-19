@@ -38,7 +38,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 - [Playwright](https://playwright.dev/) (e2e) //TODO
 
 ## Vue Plugins
-- Pina store with modules (WIP) [`origin-plugin-pina`](./src/plugins/origin-plugin-pina/)
+- pinia store with modules (WIP) [`origin-plugin-pinia`](./src/plugins/origin-plugin-pinia/)
 - Distributed identity provider //TODO [#6](https://github.com/application-research/origin/issues/6)
 - Offline first database //TODO
 ## Vite Plugins

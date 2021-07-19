@@ -1,3 +1,4 @@
+import devalue from '@nuxt/devalue'
 import { ViteSSG } from 'vite-ssg'
 import { createBase } from 'ipfs-base'
 import generatedRoutes from 'virtual:generated-pages'
@@ -16,5 +17,10 @@ export const createApp = ViteSSG(
   // function to have custom setups
   (ctx) => {
     usePlugins(ctx)
+  },
+  {
+    transformState(state) {
+      return import.meta.env.SSR ? devalue(state) : state
+    }
   }
 )
