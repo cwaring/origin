@@ -64,9 +64,9 @@ npm run build
 # preview production build /dist
 npm run serve
 ```
-### Recommended IDE Setup
+### Recommended Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) + [Vue devtools (beta)](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg)
 
 This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which is included in Vue v3.1.4. However, be sure to disable Vetur if you have it installed as these extensions conflict.
 

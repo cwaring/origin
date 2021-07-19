@@ -2,10 +2,15 @@
   <h1>{{ msg }}</h1>
 
   <p>
-    Recommended IDE setup:
+    Recommended setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+    +
+    <a
+      href="https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg"
+      >Vue devtools (beta)</a
+    >
   </p>
 
   <p>See <code>README.md</code> for more information.</p>
