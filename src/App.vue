@@ -6,12 +6,15 @@
 import { config } from '@/origin.config'
 import { useHead } from '@vueuse/head'
 
+// destruct config options
+const { title, description, lang } = config
+
 // https://github.com/vueuse/head
 useHead({
-  title: config.title,
-  meta: [{ name: 'description', content: config.description }],
+  title,
+  meta: [{ name: 'description', content: description }],
   htmlAttrs: {
-    lang: config.lang
+    lang
   }
 })
 </script>
