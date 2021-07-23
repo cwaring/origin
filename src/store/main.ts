@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
 interface MainState {
-  user: Record<string, any> | null
+  user: Record<string, number | string> | null
 }
 
 export const useMainStore = defineStore({

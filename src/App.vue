@@ -3,12 +3,19 @@
 </template>
 
 <script lang="ts" setup>
+import { appConfig } from '@/origin.config'
 import { useHead } from '@vueuse/head'
+
+// destruct config options
+const { title, description, lang } = appConfig
 
 // https://github.com/vueuse/head
 useHead({
-  title: 'Origin App',
-  meta: [{ name: 'description', content: 'Origin web3 starter' }]
+  title,
+  meta: [{ name: 'description', content: description }],
+  htmlAttrs: {
+    lang
+  }
 })
 </script>
 
