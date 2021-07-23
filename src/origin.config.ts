@@ -1,10 +1,24 @@
 interface AppConfig {
+  /**
+   * Global HTML lang string
+   * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang}
+   */
   lang: string
+  /**
+   * Default application <title> tag
+   */
   title: string
+  /**
+   * Default applcation meta description
+   */
   description: string
 }
 
 interface BuildConfig {
+  /**
+   * String array of installed plugins that you wish to activate
+   * @example ['name'] or ['origin-plugin-name']
+   */
   plugins?: string[]
 }
 
