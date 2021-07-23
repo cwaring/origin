@@ -12,8 +12,6 @@ interface OriginConfig extends AppConfig {
   buildConfig: BuildConfig
 }
 
-export const defineOriginConfig = (config: OriginConfig): OriginConfig => config
-
 const omit = <T, K extends keyof T>(obj: T, ...keys: K[]): Omit<T, K> => {
   const clone = { ...obj }
   for (const key of keys) {
@@ -22,7 +20,9 @@ const omit = <T, K extends keyof T>(obj: T, ...keys: K[]): Omit<T, K> => {
   return clone
 }
 
-const appConfig = defineOriginConfig({
+export const defineConfig = (config: OriginConfig): OriginConfig => config
+
+const appConfig = defineConfig({
   lang: 'en',
   title: 'Origin App',
   description: 'Origin web3 starter',
