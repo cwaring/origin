@@ -22,7 +22,10 @@ const omit = <T, K extends keyof T>(obj: T, ...keys: K[]): Omit<T, K> => {
 
 export const defineConfig = (config: OriginConfig): OriginConfig => config
 
-const appConfig = defineConfig({
+/**
+ * Origin global config options
+ */
+const config = defineConfig({
   lang: 'en',
   title: 'Origin App',
   description: 'Origin web3 starter',
@@ -31,5 +34,9 @@ const appConfig = defineConfig({
   }
 })
 
-export const config = omit(appConfig, 'buildConfig')
-export const buildConfig = appConfig.buildConfig
+// default export all config
+export default config
+// only app config
+export const appConfig = omit(config, 'buildConfig')
+// only build config
+export const buildConfig = config.buildConfig
