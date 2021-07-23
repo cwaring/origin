@@ -30,7 +30,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 - IPFS Base (auto gateway detection) [`ipfs-base`](https://github.com/cwaring/ipfs-base)
 - ESLint & Prettier ([`.eslintrc.js`](.eslintrc.js))
 - Server Side Page Generation [`vite-ssg`](https://github.com/antfu/vite-ssg)
-  - Metadata rendering with [`@vueuse/head`](https://github.com/vueuse/head)
+- Metadata rendering with [`@vueuse/head`](https://github.com/vueuse/head)
 - i18n //TODO
 - Markdown pages/imports //TODO
 
@@ -38,7 +38,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 - [Playwright](https://playwright.dev/) (e2e) //TODO
 
 ## Vue Plugins
-- pinia store with modules (WIP) [`origin-plugin-pinia`](./src/plugins/origin-plugin-pinia/)
+- Pinia store with modules [`origin-plugin-pinia`](./src/plugins/origin-plugin-pinia/)
 - Distributed identity provider //TODO [#6](https://github.com/application-research/origin/issues/6)
 - Offline first database //TODO
 ## Vite Plugins
@@ -52,7 +52,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 # 0: install deps
 npm i
 # 1: start development mode
-npm run dev
+npm start
 ```
 
 ```bash
