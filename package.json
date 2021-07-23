@@ -1,56 +1,18 @@
 {
-  "name": "origin-vue-ts",
+  "name": "origin",
   "private": true,
-  "version": "0.2.0",
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "vite",
-    "build": "NODE_ENV=production vite-ssg build",
-    "serve": "vite preview",
-    "lint": "eslint '**/*.{js,ts,tsx,vue}' --quiet --fix"
-  },
-  "dependencies": {
-    "@nuxt/devalue": "^2.0.0",
-    "@vueuse/core": "^5.1.4",
-    "@vueuse/head": "^0.5.1",
-    "ipfs-base": "^1.1.0",
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.10"
-  },
+  "version": "0.3.0",
+  "scripts": {},
   "workspaces": [
-    "./src/plugins/*"
+    "./packages/**"
   ],
   "engines": {
     "npm": ">=7",
     "node": ">=12"
   },
   "devDependencies": {
-    "@types/node": "^16.4.0",
-    "@typescript-eslint/eslint-plugin": "^4.28.4",
-    "@typescript-eslint/parser": "^4.28.4",
-    "@vitejs/plugin-vue": "^1.2.5",
-    "@vue/compiler-sfc": "^3.1.5",
-    "@vue/server-renderer": "^3.1.5",
-    "autoprefixer": "^10.3.1",
     "eslint": "^7.31.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsonc": "^1.4.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-vue": "^7.14.0",
-    "eslint-plugin-yml": "^0.9.0",
-    "postcss-nested": "^5.0.5",
     "prettier": "^2.3.2",
-    "typescript": "^4.3.5",
-    "vite": "^2.4.3",
-    "vite-plugin-components": "^0.13.0",
-    "vite-plugin-pages": "^0.15.1",
-    "vite-plugin-vue-layouts": "^0.3.1",
-    "vite-ssg": "^0.12.0",
-    "vue-eslint-parser": "^7.9.0",
-    "vue-tsc": "^0.2.2"
+    "typescript": "^4.3.5"
   }
 }

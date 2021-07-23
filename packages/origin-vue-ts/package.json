@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "version": "0.3.0",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite",
+    "build": "NODE_ENV=production vite-ssg build",
+    "serve": "vite preview",
+    "lint": "eslint '**/*.{js,ts,tsx,vue}' --quiet --fix"
+  },
+  "dependencies": {
+    "@nuxt/devalue": "^2.0.0",
+    "@vueuse/core": "^5.1.4",
+    "@vueuse/head": "^0.5.1",
+    "ipfs-base": "^1.1.0",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10"
+  },
+  "workspaces": [
+    "./src/plugins/*"
+  ],
+  "engines": {
+    "npm": ">=7",
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.0",
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.1.5",
+    "@vue/server-renderer": "^3.1.5",
+    "autoprefixer": "^10.3.1",
+    "eslint": "^7.31.0",
+    "postcss-nested": "^5.0.5",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.3",
+    "vite-plugin-components": "^0.13.0",
+    "vite-plugin-pages": "^0.15.1",
+    "vite-plugin-vue-layouts": "^0.3.1",
+    "vite-ssg": "^0.12.0",
+    "vue-tsc": "^0.2.2"
+  }
+}

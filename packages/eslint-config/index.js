@@ -25,7 +25,6 @@ module.exports = {
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
   ],
   rules: {
     'vue/html-self-closing': 'off',

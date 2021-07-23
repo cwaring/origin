@@ -1,0 +1,6 @@
+{
+    "extends": [
+        "eslint-config-origin",
+        "plugin:prettier/recommended"
+    ]
+}

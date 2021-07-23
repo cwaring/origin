@@ -5,6 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -16,6 +17,16 @@
       "esnext",
       "dom"
     ],
+    "types": [
+      "vite/client",
+      "vite-plugin-vue-layouts/client",
+      "vite-plugin-pages/client"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "exclude": [
     "dist",
