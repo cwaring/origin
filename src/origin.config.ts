@@ -15,11 +15,11 @@ interface OriginConfig extends AppConfig {
 export const defineOriginConfig = (config: OriginConfig): OriginConfig => config
 
 const omit = <T, K extends keyof T>(obj: T, ...keys: K[]): Omit<T, K> => {
-  const ret = { ...obj }
+  const clone = { ...obj }
   for (const key of keys) {
-    delete ret[key]
+    delete clone[key]
   }
-  return ret
+  return clone
 }
 
 const appConfig = defineOriginConfig({
