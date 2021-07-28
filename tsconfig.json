@@ -14,7 +14,8 @@
     "forceConsistentCasingInFileNames": true,
     "lib": [
       "esnext",
-      "dom"
+      "dom",
+      "dom.iterable",
     ],
   },
   "exclude": [
