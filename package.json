@@ -5,7 +5,7 @@
   "scripts": {},
   "workspaces": [
     "./packages/*",
-    "./packages/origin-vue-ts/src/plugins/origin-plugin-pinia"
+    "./packages/origin-vue-ts/src/plugins/*"
   ],
   "engines": {
     "npm": ">=7",
