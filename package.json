@@ -4,7 +4,8 @@
   "version": "0.3.0",
   "scripts": {},
   "workspaces": [
-    "./packages/**"
+    "./packages/*",
+    "./packages/origin-vue-ts/src/plugins/origin-plugin-pinia"
   ],
   "engines": {
     "npm": ">=7",

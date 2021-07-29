@@ -4,8 +4,8 @@
   "version": "0.3.0",
   "main": "index.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.4",
-    "@typescript-eslint/parser": "^4.28.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
@@ -14,9 +14,9 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^7.14.0",
-    "eslint-plugin-yml": "^0.9.0",
+    "eslint-plugin-yml": "^0.10.0",
     "prettier": "^2.3.2",
-    "vue-eslint-parser": "^7.9.0"
+    "vue-eslint-parser": "^7.10.0"
   },
   "engines": {
     "npm": ">=7",
@@ -26,6 +26,6 @@
     "eslint": "^7.31.0"
   },
   "peerDependencies": {
-    "eslint": ">=7.3"
+    "eslint": ">=7.31.0"
   }
 }

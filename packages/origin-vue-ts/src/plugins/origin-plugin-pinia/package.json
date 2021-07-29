@@ -1,7 +1,8 @@
 {
+  "name": "origin-plugin-pinia",
   "private": true,
   "description": "https://pinia.esm.dev plugin example",
   "dependencies": {
-    "pinia": "^2.0.0-beta.5"
+    "pinia": "2.0.0-beta.5"
   }
 }
