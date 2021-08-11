@@ -15,7 +15,8 @@
     "forceConsistentCasingInFileNames": true,
     "lib": [
       "esnext",
-      "dom"
+      "dom",
+      "dom.iterable"
     ],
     "types": [
       "vite/client",
