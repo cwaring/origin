@@ -12,8 +12,7 @@
     "node": ">=12"
   },
   "devDependencies": {
-    "eslint": "^7.31.0",
-    "prettier": "^2.3.2",
+    "@app-research/eslint-config": "^0.1.0",
     "typescript": "^4.3.5"
   }
-} 
+}
