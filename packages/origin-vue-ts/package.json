@@ -14,12 +14,10 @@
     "@vueuse/core": "^5.3.0",
     "@vueuse/head": "^0.5.1",
     "ipfs-base": "^1.1.0",
+    "pinia": "^2.0.0-rc.4",
     "vue": "^3.2.2",
     "vue-router": "^4.0.11"
   },
-  "workspaces": [
-    "./src/plugins/*"
-  ],
   "engines": {
     "npm": ">=7",
     "node": ">=12"
