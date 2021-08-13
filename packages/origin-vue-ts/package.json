@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "NODE_ENV=production vite-ssg build",
     "serve": "vite preview",
-    "lint": "eslint '**/*.{js,ts,tsx,vue}' --quiet --fix"
+    "lint": "eslint 'src/**' --fix"
   },
   "dependencies": {
     "@nuxt/devalue": "^2.0.0",
@@ -23,7 +23,7 @@
     "node": ">=12"
   },
   "devDependencies": {
-    "@app-research/eslint-config": "^0.1.1",
+    "@app-research/eslint-config": "^0.1.2",
     "@types/node": "^16.6.1",
     "@vitejs/plugin-vue": "^1.4.0",
     "@vue/compiler-sfc": "^3.2.2",

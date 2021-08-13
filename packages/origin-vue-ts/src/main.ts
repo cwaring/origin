@@ -3,9 +3,10 @@ import { ViteSSG } from 'vite-ssg'
 import { createBase } from 'ipfs-base'
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'layouts-generated'
-import { usePlugins } from '@/plugins'
 
 import App from './App.vue'
+
+import { usePlugins } from '@/plugins'
 
 const routes = setupLayouts(generatedRoutes)
 

@@ -1,3 +1,6 @@
 {
-    "extends": "@app-research"
+    "root": true,
+    "extends": [
+        "@app-research"
+    ]
 }

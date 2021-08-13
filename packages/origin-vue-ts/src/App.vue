@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-import { appConfig } from '@/origin.config'
 import { useHead } from '@vueuse/head'
+import { appConfig } from '@/origin.config'
 
 // destruct config options
 const { title, description, lang } = appConfig

@@ -1,7 +1,27 @@
-<svg width="386" height="386" viewBox="0 0 386 386" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="188" cy="193" r="186" fill="#141111"/>
-<circle class="c-spin" cx="180" cy="193" r="85.5" stroke="#FFEEEE" stroke-width="5"/>
-<g style="mix-blend-mode:screen">
-<circle class="c-spin" cx="195" cy="193" r="85.5" stroke="#FFEEEE" stroke-width="5"/>
-</g>
+;<svg
+  width="386"
+  height="386"
+  viewBox="0 0 386 386"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="188" cy="193" r="186" fill="#141111" />
+  <circle
+    class="c-spin"
+    cx="180"
+    cy="193"
+    r="85.5"
+    stroke="#FFEEEE"
+    stroke-width="5"
+  />
+  <g style="mix-blend-mode:screen">
+    <circle
+      class="c-spin"
+      cx="195"
+      cy="193"
+      r="85.5"
+      stroke="#FFEEEE"
+      stroke-width="5"
+    />
+  </g>
 </svg>
