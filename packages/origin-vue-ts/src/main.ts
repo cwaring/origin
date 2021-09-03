@@ -2,7 +2,7 @@ import devalue from '@nuxt/devalue'
 import { ViteSSG } from 'vite-ssg'
 import { createBase } from 'ipfs-base'
 import generatedRoutes from 'virtual:generated-pages'
-import { setupLayouts } from 'layouts-generated'
+import { setupLayouts } from 'virtual:generated-layouts'
 
 import App from './App.vue'
 
