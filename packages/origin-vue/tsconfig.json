@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es2018",
+    "lib": ["esnext", "dom"],
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "types": [
+      "vite-ssg",
+      "vite/client",
+      "vite-plugin-vue-layouts/client",
+      "vite-plugin-pages/client"
+    ],
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "test",
+  ]
+}
