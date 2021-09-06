@@ -7,7 +7,7 @@
     "dev": "npm run build:esm -- -w --incremental",
     "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc --declaration true",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs", 
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "@vue/compiler-sfc": "^3.2.9",
     "@vue/server-renderer": "^3.2.9",
     "autoprefixer": "^10.3.4",
+    "critters": "^0.0.10",
     "postcss-nested": "^5.0.6",
     "typescript": "^4.4.2",
     "unplugin-vue-components": "^0.14.12",
