@@ -3,8 +3,9 @@
   "version": "0.3.0-beta.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
-    "dev": "npm run build:esm -- -w --incremental",
+    "dev": "npm run build:esm -- -w --incremental & npm run build:cjs -- -w --incremental",
     "build": "rimraf dist && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --project tsconfig.cjs.json",
@@ -19,14 +20,14 @@
       "require": "./dist/cjs/index.js",
       "import": "./dist/esm/index.js"
     },
-    "./config": {
+    "./vite": {
       "require": "./dist/cjs/vite/index.js",
       "import": "./dist/esm/vite/index.js"
     }
   },
   "typesVersions": {
     "*": {
-      "config": [
+      "vite": [
         "./dist/esm/vite/index.d.ts"
       ]
     }

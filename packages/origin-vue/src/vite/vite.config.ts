@@ -6,7 +6,7 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export const config = defineConfig({
   base: '', // important to be left empty to compile into relative paths
   resolve: {
     alias: {
