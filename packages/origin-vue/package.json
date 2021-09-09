@@ -1,44 +1,65 @@
 {
   "name": "@app-research/origin-vue",
-  "version": "0.3.0",
-  "main": "dist/vite/index.js",
-  "types": "dist/vite/index.d.ts",
+  "version": "0.3.0-beta.2",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
     "dev": "npm run build:esm -- -w --incremental",
-    "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc --declaration true",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build": "rimraf dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
     "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "npm": ">=7",
+    "node": ">=12"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    },
+    "./config": {
+      "require": "./dist/cjs/vite/index.js",
+      "import": "./dist/esm/vite/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "config": ["./dist/esm/vite/index.d.ts"]
+    }
   },
   "dependencies": {
     "@nuxt/devalue": "^2.0.0",
-    "@vueuse/core": "^6.2.1",
+    "@types/node": "^16.7.13",
+    "@vitejs/plugin-vue": "^1.6.2",
+    "@vue/compiler-sfc": "^3.2.11",
+    "@vue/server-renderer": "^3.2.11",
+    "@vueuse/core": "^6.3.2",
     "@vueuse/head": "^0.5.1",
+    "autoprefixer": "^10.3.4",
+    "critters": "^0.0.10",
     "ipfs-base": "^1.1.0",
     "pinia": "^2.0.0-rc.8",
-    "vue": "^3.2.9",
-    "vue-router": "^4.0.11"
+    "postcss-nested": "^5.0.6",
+    "unplugin-vue-components": "^0.15.0",
+    "vite-plugin-pages": "^0.18.0",
+    "vite-plugin-vue-layouts": "^0.4.1",
+    "vite-ssg": "^0.15.1",
+    "vue-tsc": "^0.3.0"
   },
   "files": [
     "dist",
     "config.js",
     "config.d.ts"
   ],
-  "devDependencies": {
+  "peerDependencies": {
     "@app-research/eslint-config": "^0.1.2",
-    "@types/node": "^16.7.10",
-    "@vitejs/plugin-vue": "^1.6.1",
-    "@vue/compiler-sfc": "^3.2.9",
-    "@vue/server-renderer": "^3.2.9",
-    "autoprefixer": "^10.3.4",
-    "critters": "^0.0.10",
-    "postcss-nested": "^5.0.6",
     "typescript": "^4.4.2",
-    "unplugin-vue-components": "^0.14.12",
-    "vite": "^2.5.3",
-    "vite-plugin-pages": "^0.18.0",
-    "vite-plugin-vue-layouts": "^0.4.1",
-    "vite-ssg": "^0.15.1",
-    "vue-tsc": "^0.3.0"
+    "vue": "^3.2.9",
+    "vue-router": "^4.0.11"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }

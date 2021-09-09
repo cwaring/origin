@@ -1,17 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "dist/esm",
     "module": "esnext",
-    "target": "es2018",
+    "target": "es2020",
     "lib": ["esnext", "dom"],
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
+    "declaration": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "noImplicitAny": true,
     "types": [
       "vite-ssg",
       "vite/client",
@@ -19,9 +18,9 @@
       "vite-plugin-pages/client"
     ],
   },
-  "include": ["src"],
   "exclude": [
     "node_modules",
     "test",
+    "dist"
   ]
 }

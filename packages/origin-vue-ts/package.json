@@ -5,12 +5,12 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "vite",
-    "build": "NODE_ENV=production vite-ssg build",
+    "build": "NODE_ENV=production vite build",
     "serve": "vite preview",
     "lint": "eslint 'src/**' --fix"
   },
-  "dependencies": {
-    "@app-research/origin-vue": "0.3"
+  "devDependencies": {
+    "@app-research/origin-vue": "0.3.0-beta.2"
   },
   "engines": {
     "npm": ">=7",

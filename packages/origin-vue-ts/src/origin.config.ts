@@ -1,4 +1,4 @@
-import { defineConfig, omit } from '@app-research/origin-vue/dist/origin'
+import { defineConfig, omit } from '@app-research/origin-vue'
 
 /**
  * Origin global config options
