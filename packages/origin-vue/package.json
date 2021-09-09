@@ -26,7 +26,9 @@
   },
   "typesVersions": {
     "*": {
-      "config": ["./dist/esm/vite/index.d.ts"]
+      "config": [
+        "./dist/esm/vite/index.d.ts"
+      ]
     }
   },
   "dependencies": {
