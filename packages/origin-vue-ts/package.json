@@ -4,9 +4,9 @@
   "version": "0.3.0",
   "scripts": {
     "start": "npm run dev",
-    "dev": "vite",
-    "build": "NODE_ENV=production vite build",
-    "serve": "vite preview",
+    "dev": "origin dev",
+    "build": "origin build",
+    "preview": "origin preview",
     "lint": "eslint 'src/**' --fix"
   },
   "devDependencies": {
