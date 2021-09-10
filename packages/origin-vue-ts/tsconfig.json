@@ -1,3 +1,6 @@
 {
-  "extends": "@app-research/origin-vue/config/tsconfig.base.json"
+  "extends": "@app-research/origin-vue/config/tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": "." // lock the baseUrl to the app root
+  }
 }

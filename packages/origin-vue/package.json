@@ -24,11 +24,8 @@
       "require": "./dist/cjs/vite/index.js",
       "import": "./dist/esm/vite/index.js"
     },
-    "./config/tsconfig.base.json": {
-      "require" :"./config/tsconfig.base.json",
-      "import" :"./config/tsconfig.base.json"
-    },
-    "./prettier": "./config/prettier.json"
+    "./config/tsconfig.base": "./config/tsconfig.base.json",
+    "./config/prettier": "./config/prettier.json"
   },
   "typesVersions": {
     "*": {
