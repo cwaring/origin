@@ -1,5 +1,5 @@
 import { createPinia } from 'pinia'
-import { OriginPlugin } from '@/plugins'
+import { OriginPlugin } from '@app-research/origin-vue'
 import { useMainStore } from '@/store/main'
 
 export const install: OriginPlugin = ({ app, router, initialState }) => {
