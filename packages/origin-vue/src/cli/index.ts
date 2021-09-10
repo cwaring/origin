@@ -10,7 +10,7 @@ import { cac } from 'cac'
  */
 const cli = cac('origin')
 
-cli.command('build', 'Run production build').action((args) => {
+cli.command('build', 'Run production build').action((opts) => {
   spawn('vite-ssg', ['build'], {
     stdio: 'inherit',
     env: { NODE_ENV: 'production', ...process.env }
@@ -19,7 +19,7 @@ cli.command('build', 'Run production build').action((args) => {
   })
 })
 
-cli.command('dev', 'Run development mode and watch project').action((args) => {
+cli.command('dev', 'Run development mode and watch project').action((opts) => {
   spawn('vite', {
     stdio: 'inherit',
     env: { NODE_ENV: 'development', ...process.env }
@@ -30,10 +30,10 @@ cli.command('dev', 'Run development mode and watch project').action((args) => {
 
 cli
   .command('preview', 'Serve compiled project output preview')
-  .action((args) => {
-    spawn('vite', ['preview'], {
-      stdio: 'inherit',
-      env: { NODE_ENV: 'pro', ...process.env }
+  .option('--host [host]', `[string] specify hostname`)
+  .action((opts) => {
+    spawn('vite', ['preview', opts.host ? `--host` : ''], {
+      stdio: 'inherit'
     }).on('error', function (err) {
       throw err
     })
