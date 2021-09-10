@@ -2,7 +2,7 @@ import { createPinia } from 'pinia'
 import { OriginPlugin } from '@app-research/origin-vue'
 import { useMainStore } from '@/store/main'
 
-export const install: OriginPlugin = ({ app, router, initialState }) => {
+export const setup: OriginPlugin = ({ app, router, initialState }) => {
   const pinia = createPinia()
   app.use(pinia)
 
@@ -20,3 +20,10 @@ export const install: OriginPlugin = ({ app, router, initialState }) => {
     next()
   })
 }
+
+const plugin = (options = {}) => ({
+  name: 'origin-pina',
+  load: setup
+})
+
+export default plugin

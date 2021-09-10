@@ -1,4 +1,5 @@
 import { defineConfig, omit } from '@app-research/origin-vue'
+import pinia from '@/plugins/pinia'
 
 /**
  * Origin global config options
@@ -7,9 +8,8 @@ const config = defineConfig({
   lang: 'en',
   title: 'Origin App',
   description: 'Origin web3 starter',
-  buildConfig: {
-    plugins: ['pinia']
-  }
+  plugins: [pinia()],
+  buildConfig: {}
 })
 
 // default export all config

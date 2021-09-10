@@ -1,3 +1,9 @@
+import { ViteSSGContext } from 'vite-ssg'
+interface ClientPlugin {
+  name: string
+  load: (ctx: ViteSSGContext) => void
+}
+
 interface AppConfig {
   /**
    * Global HTML lang string
@@ -12,6 +18,10 @@ interface AppConfig {
    * Default applcation meta description
    */
   description: string
+  /**
+   * Client side vue plugins
+   */
+  plugins: ClientPlugin[]
 }
 
 interface BuildConfig {
