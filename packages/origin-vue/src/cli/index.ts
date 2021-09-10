@@ -5,7 +5,7 @@ import { spawn } from 'child_process'
 import { cac } from 'cac'
 
 /**
- * Origin Cli vite wrapper for core app methods
+ * Origin cli vite wrapper for core app methods
  * Allows control for rendering and build steps
  */
 const cli = cac('origin')
