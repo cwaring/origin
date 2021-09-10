@@ -12,6 +12,7 @@
   "devDependencies": {
     "@app-research/origin-vue": "0.3.0-beta.2"
   },
+  "prettier": "@app-research/origin-vue/prettier",
   "engines": {
     "npm": ">=7",
     "node": ">=12"

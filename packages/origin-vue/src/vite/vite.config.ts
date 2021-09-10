@@ -1,4 +1,4 @@
-import path from 'path'
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
@@ -12,7 +12,7 @@ export const config = defineConfig({
   base: '', // important to be left empty to compile into relative paths
   resolve: {
     alias: {
-      '@/': `${path.resolve(process.cwd(), 'src')}/`
+      '@/': `${resolve(process.cwd(), 'src')}/`
     }
   },
   plugins: [

@@ -23,7 +23,12 @@
     "./vite": {
       "require": "./dist/cjs/vite/index.js",
       "import": "./dist/esm/vite/index.js"
-    }
+    },
+    "./config/tsconfig.base.json": {
+      "require" :"./config/tsconfig.base.json",
+      "import" :"./config/tsconfig.base.json"
+    },
+    "./prettier": "./config/prettier.json"
   },
   "typesVersions": {
     "*": {
@@ -56,7 +61,9 @@
     "vue-tsc": "^0.3.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "config",
+    "bin"
   ],
   "peerDependencies": {
     "@app-research/eslint-config": "^0.1.2",
