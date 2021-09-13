@@ -6,6 +6,7 @@
   "workspaces": [
     "./packages/*"
   ],
+  "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {
     "npm": ">=7",
     "node": ">=12"
