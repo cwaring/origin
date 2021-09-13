@@ -13,7 +13,7 @@ const cli = cac('origin')
 cli.command('build', 'Run production build').action((opts) => {
   spawn('vite-ssg', ['build'], {
     stdio: 'inherit',
-    env: { NODE_ENV: 'production', ...process.env }
+    env: { ...process.env, NODE_ENV: 'production' }
   }).on('error', function (err) {
     throw err
   })
@@ -22,7 +22,7 @@ cli.command('build', 'Run production build').action((opts) => {
 cli.command('dev', 'Run development mode and watch project').action((opts) => {
   spawn('vite', {
     stdio: 'inherit',
-    env: { NODE_ENV: 'development', ...process.env }
+    env: { ...process.env, NODE_ENV: 'development' }
   }).on('error', function (err) {
     throw err
   })
