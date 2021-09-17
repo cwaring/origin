@@ -1,0 +1,24 @@
+{
+  "name": "create-origin",
+  "version": "0.3.0-beta.1",
+  "description": "CLI to scaffold an origin app",
+  "main": "dist/index.js",
+  "bin": {
+    "create-origin": "bin/create-origin.js",
+    "coa": "bin/create-origin.js"
+  },
+  "files":[
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "dev": "npm run build -- -w --incremental"
+  },
+  "author": "cwaring",
+  "license": "MIT",
+  "dependencies": {
+    "cac": "^6.7.3"
+  }
+}
