@@ -7,10 +7,22 @@
     "create-origin": "bin/create-origin.js",
     "coa": "bin/create-origin.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/application-research/origin.git",
+    "directory": "packages/create-origin"
+  },
+  "bugs": {
+    "url": "https://github.com/application-research/origin/issues"
+  },
+  "homepage": "https://github.com/application-research/origin/tree/main/packages/create-origin#readme",
   "files":[
     "dist",
     "bin"
   ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && tsc",
