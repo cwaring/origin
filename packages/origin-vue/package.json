@@ -39,10 +39,10 @@
   },
   "dependencies": {
     "@nuxt/devalue": "^2.0.0",
-    "@vitejs/plugin-vue": "^1.6.2",
-    "@vue/compiler-sfc": "^3.2.12",
-    "@vue/server-renderer": "^3.2.12",
-    "@vueuse/core": "^6.4.0",
+    "@vitejs/plugin-vue": "^1.9.0",
+    "@vue/compiler-sfc": "^3.2.13",
+    "@vue/server-renderer": "^3.2.13",
+    "@vueuse/core": "^6.4.1",
     "@vueuse/head": "^0.5.1",
     "autoprefixer": "^10.3.4",
     "cac": "^6.7.3",
@@ -53,8 +53,8 @@
     "unplugin-vue-components": "^0.15.2",
     "vite": "^2.5.10",
     "vite-plugin-pages": "^0.18.1",
-    "vite-plugin-vue-layouts": "^0.4.1",
-    "vite-ssg": "^0.15.1",
+    "vite-plugin-vue-layouts": "^0.5.0",
+    "vite-ssg": "^0.15.2",
     "vue-tsc": "^0.3.0"
   },
   "files": [
@@ -65,11 +65,11 @@
   "peerDependencies": {
     "@app-research/eslint-config": "^0.1.2",
     "typescript": "^4.4.3",
-    "vue": "^3.2.9",
+    "vue": "^3.2.13",
     "vue-router": "^4.0.11"
   },
   "devDependencies": {
-    "@types/node": "^16.9.4",
+    "@types/node": "^16.9.6",
     "rimraf": "^3.0.2"
   }
 }
