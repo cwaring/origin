@@ -16,7 +16,7 @@
     "url": "https://github.com/application-research/origin/issues"
   },
   "homepage": "https://github.com/application-research/origin/tree/main/packages/create-origin#readme",
-  "files":[
+  "files": [
     "dist",
     "bin"
   ],
@@ -32,5 +32,8 @@
   "license": "MIT",
   "dependencies": {
     "cac": "^6.7.3"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }

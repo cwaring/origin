@@ -9,6 +9,9 @@ const cli = cac('coa')
 
 cli
   .command('[dir]', 'build base origin-vue-ts app with defaults')
+  .option('--template', 'select a base template', {
+    default: 'origin-vue-ts'
+  })
   .action((dir = 'origin-app', opts) => {
     console.log('scaffolding project to :', dir)
   })

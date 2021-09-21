@@ -2,14 +2,12 @@
   "name": "origin-project",
   "private": true,
   "version": "0.3.0",
-  "scripts": {},
-  "workspaces": [
-    "./packages/*"
-  ],
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev --filter ./packages"
+  },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {
-    "npm": ">=7",
-    "node": ">=12"
+    "node": ">=16"
   },
   "devDependencies": {
     "@app-research/eslint-config": "^0.1.2",

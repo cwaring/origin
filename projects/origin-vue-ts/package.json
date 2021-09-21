@@ -10,11 +10,11 @@
     "lint": "eslint 'src/**' --fix"
   },
   "devDependencies": {
-    "@app-research/origin-vue": "0.3.0-beta.2"
+    "@app-research/origin-vue": "workspace:*"
   },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {
     "npm": ">=7",
-    "node": ">=12"
+    "node": ">=16"
   }
 }

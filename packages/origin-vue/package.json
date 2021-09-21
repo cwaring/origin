@@ -21,8 +21,8 @@
       "import": "./dist/esm/index.js"
     },
     "./vite": {
-      "require": "./dist/cjs/vite/index.js",
-      "import": "./dist/esm/vite/index.js"
+      "require": "./dist/cjs/node/vite/index.js",
+      "import": "./dist/esm/node/vite/index.js"
     },
     "./config/tsconfig.base": "./config/tsconfig.base.json",
     "./config/prettier": "./config/prettier.json"
@@ -30,7 +30,7 @@
   "typesVersions": {
     "*": {
       "vite": [
-        "./dist/esm/vite/index.d.ts"
+        "./dist/esm/node/vite/index.d.ts"
       ]
     }
   },
@@ -39,7 +39,6 @@
   },
   "dependencies": {
     "@nuxt/devalue": "^2.0.0",
-    "@types/node": "^16.9.2",
     "@vitejs/plugin-vue": "^1.6.2",
     "@vue/compiler-sfc": "^3.2.12",
     "@vue/server-renderer": "^3.2.12",
@@ -52,6 +51,7 @@
     "pinia": "^2.0.0-rc.9",
     "postcss-nested": "^5.0.6",
     "unplugin-vue-components": "^0.15.2",
+    "vite": "^2.5.10",
     "vite-plugin-pages": "^0.18.1",
     "vite-plugin-vue-layouts": "^0.4.1",
     "vite-ssg": "^0.15.1",
@@ -69,6 +69,7 @@
     "vue-router": "^4.0.11"
   },
   "devDependencies": {
+    "@types/node": "^16.9.4",
     "rimraf": "^3.0.2"
   }
 }
