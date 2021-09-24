@@ -11,10 +11,6 @@
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "prepublishOnly": "npm run build"
   },
-  "engines": {
-    "npm": ">=7",
-    "node": ">=12"
-  },
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",
@@ -40,21 +36,21 @@
   "dependencies": {
     "@nuxt/devalue": "^2.0.0",
     "@vitejs/plugin-vue": "^1.9.0",
-    "@vue/compiler-sfc": "^3.2.13",
-    "@vue/server-renderer": "^3.2.13",
+    "@vue/compiler-sfc": "^3.2.14",
+    "@vue/server-renderer": "^3.2.14",
     "@vueuse/core": "^6.4.1",
     "@vueuse/head": "^0.5.1",
-    "autoprefixer": "^10.3.4",
     "cac": "^6.7.3",
     "critters": "^0.0.10",
     "ipfs-base": "^1.1.0",
     "pinia": "^2.0.0-rc.9",
-    "postcss-nested": "^5.0.6",
     "unplugin-vue-components": "^0.15.2",
-    "vite": "^2.5.10",
+    "vite": "^2.6.0-beta.2",
     "vite-plugin-pages": "^0.18.1",
     "vite-plugin-vue-layouts": "^0.5.0",
-    "vite-ssg": "^0.15.2",
+    "vite-ssg": "^0.15.3",
+    "vue": "^3.2.14",
+    "vue-router": "^4.0.11",
     "vue-tsc": "^0.3.0"
   },
   "files": [
@@ -63,13 +59,11 @@
     "bin"
   ],
   "peerDependencies": {
-    "@app-research/eslint-config": "^0.1.2",
-    "typescript": "^4.4.3",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.11"
+    "@app-research/eslint-config": "^0.1.2"
   },
   "devDependencies": {
     "@types/node": "^16.9.6",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.3"
   }
 }

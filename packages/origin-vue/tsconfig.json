@@ -3,7 +3,9 @@
     "outDir": "dist/esm",
     "module": "esnext",
     "target": "esnext",
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext"
+    ],
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
@@ -11,12 +13,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "types": [
-      "vite-ssg",
-      "vite/client",
-      "vite-plugin-vue-layouts/client",
-      "vite-plugin-pages/client"
-    ],
   },
   "exclude": [
     "node_modules",
