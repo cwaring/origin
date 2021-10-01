@@ -1,4 +1,7 @@
 import { ViteSSGContext } from 'vite-ssg'
 
-export type OriginPlugins = (ctx: ViteSSGContext) => void
-export type OriginPlugin = (ctx: ViteSSGContext) => void
+type OriginPluginFn = (ctx: ViteSSGContext) => void
+export interface OriginPlugin {
+  name: string
+  load: OriginPluginFn
+}
