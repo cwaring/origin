@@ -6,5 +6,6 @@ export interface OriginPlugin {
   load: OriginPluginFn
 }
 
-export const definePlugin = (pluginWrapper: OriginPlugin): OriginPlugin =>
-  pluginWrapper
+export function definePlugin(pluginWrapper: OriginPlugin): () => OriginPlugin {
+  return () => pluginWrapper
+}
