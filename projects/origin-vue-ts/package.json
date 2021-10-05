@@ -1,7 +1,7 @@
 {
   "name": "origin-vue-ts",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.3.0-beta.1",
   "scripts": {
     "start": "npm run dev",
     "dev": "origin dev",
@@ -10,7 +10,7 @@
     "lint": "eslint 'src/**' --fix"
   },
   "devDependencies": {
-    "@app-research/origin-vue": "workspace:*"
+    "@app-research/origin-vue": "*"
   },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {

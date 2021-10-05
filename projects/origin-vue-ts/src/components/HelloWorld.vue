@@ -31,11 +31,16 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useMainStore } from '@/stores/main'
+
+// use the mainStore
+const store = useMainStore()
+
+// extract values from the store as refs to keep reactivity
+const { count } = storeToRefs(store)
 
 defineProps<{ msg: string }>()
-
-const count = ref(0)
 </script>
 
 <style scoped>

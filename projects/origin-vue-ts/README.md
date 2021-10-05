@@ -18,32 +18,21 @@ The production build uses [rollup](https://rollupjs.org/guide/en/) to generate a
 
 We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/api-plugin.html) to provide a selection of essential web3 tools/apis for the purpose of plug and play integration with web3 wallets, storage, distributed identity along with other general ui/design productivity frameworks.
 
-## Core Features 
+## Included Core Features 
 - [Vite 2.x](https://vitejs.dev/) with [Vue 3](https://v3.vuejs.org/) & [Typescript](https://www.typescriptlang.org/)
-- Auto component importing ([`vite-plugin-components`](https://github.com/antfu/vite-plugin-components))
+- Auto component importing ([`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components))
 - File based routing ([`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages))
 - Layout sub-system ([`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts))
-- PostCSS ([`postcss.config.js`](https://vitejs.dev/guide/features.html#postcss))
-  - [`postcss-modules`](https://github.com/madyankin/postcss-modules)
-  - [`postcss-nested`](https://github.com/postcss/postcss-nested)
-  - [`autoprefixer`](https://github.com/postcss/autoprefixer)
 - IPFS Base (auto gateway detection) [`ipfs-base`](https://github.com/cwaring/ipfs-base)
-- ESLint & Prettier ([`.eslintrc.js`](.eslintrc.js))
+- ARG ESLint config (with Prettier) ([`@app-research/eslint-config`](https://github.com/application-research/eslint-config))
 - Server Side Page Generation [`vite-ssg`](https://github.com/antfu/vite-ssg)
 - Metadata rendering with [`@vueuse/head`](https://github.com/vueuse/head)
-- i18n //TODO
-- Markdown pages/imports //TODO
 
-## Testing
-- [Playwright](https://playwright.dev/) (e2e) //TODO
+## Origin Vue Plugins
+- [Pinia](https://pinia.esm.dev/) store with SSG state serialization [`origin-plugin-pinia`](./src/plugins/pinia/index.ts)
 
-## Vue Plugins
-- Pinia store with modules [`origin-plugin-pinia`](./src/plugins/origin-plugin-pinia/)
-- Distributed identity provider //TODO [#6](https://github.com/application-research/origin/issues/6)
-- Offline first database //TODO
-## Vite Plugins
-- Tailwind 2.x //TODO
-
+## Included plugins
+- VueUse utility library [`@vueuse/core`](https://vueuse.org/)
 ---
 
 ## Development
@@ -68,8 +57,8 @@ npm run serve
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) + [Vue devtools (beta)](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg)
 
-This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which is included in Vue v3.1.4. However, be sure to disable Vetur if you have it installed as these extensions conflict.
+This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which is included in Vue > v3.1.4. However, be sure to disable Vetur if you have it installed as these extensions conflict.
 
 ### Type Support For `.vue` Imports in TS
 
-If you are using Volar the default configuration included in Origin enables prop types for `.vue` imports. You can toggle this by selecting `Volar: Switch TS Plugin on/off` from the VSCode command palette.
+If you are using Volar the default configuration included in Origin enables prop types for `.vue` imports. To enable Volar takeover mode you will need to follow [some additional steps](https://github.com/johnsoncodehk/volar/discussions/471).

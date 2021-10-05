@@ -1,29 +1,17 @@
-import { createPinia } from 'pinia'
-import { OriginPlugin } from '@app-research/origin-vue'
-import { useMainStore } from '@/store/main'
+import { definePlugin } from '@app-research/origin-vue'
+import pinia from './instance'
 
-export const setup: OriginPlugin = ({ app, router, initialState }) => {
-  const pinia = createPinia()
-  app.use(pinia)
+export default definePlugin({
+  name: 'pinia',
+  load: ({ app, initialState }) => {
+    app.use(pinia)
 
-  if (import.meta.env.SSR) {
-    // this will be stringified and set to window.__INITIAL_STATE__
-    initialState.pinia = pinia.state.value
-  } else {
-    // on the client side, we restore the state
-    pinia.state.value = initialState?.pinia || {}
+    if (import.meta.env.SSR) {
+      // this will be stringified and set to window.__INITIAL_STATE__
+      initialState.pinia = pinia.state.value
+    } else {
+      // on the client side, we restore the state
+      pinia.state.value = initialState.pinia || {}
+    }
   }
-
-  router.beforeEach((to, from, next) => {
-    const store = useMainStore(pinia)
-    store.initialize()
-    next()
-  })
-}
-
-const plugin = (options = {}) => ({
-  name: 'origin-pina',
-  load: setup
 })
-
-export default plugin

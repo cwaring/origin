@@ -1,13 +1,15 @@
-import { defineStore } from 'pinia'
+import { defineStore, acceptHMRUpdate } from 'pinia'
 
 interface MainState {
   user: Record<string, number | string> | null
+  count: number
 }
 
 export const useMainStore = defineStore({
   id: 'main',
   state: (): MainState => ({
-    user: null
+    user: null,
+    count: 0
   }),
   getters: {
     isReady(state) {
@@ -27,3 +29,8 @@ export const useMainStore = defineStore({
     }
   }
 })
+
+// enable HMR
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useMainStore, import.meta.hot))
+}
