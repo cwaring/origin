@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "dist/esm",
+    "baseUrl": ".",
+    "outDir": "dist",
     "module": "esnext",
     "target": "esnext",
     "lib": [
