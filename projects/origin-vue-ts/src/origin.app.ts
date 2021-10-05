@@ -1,28 +1,23 @@
-import devalue from '@nuxt/devalue'
-import { ViteSSG } from 'vite-ssg'
-import { createBase } from 'ipfs-base'
+import { defineApp } from '@app-research/origin-vue'
+
+// vite virtual plugins
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
 
-import App from './App.vue'
-import config from '@/origin.config'
+// import plugins
+import pinia from '@/plugins/pinia'
+import mainStore from '@/plugins/pinia/mainStore'
+
+// root comp
+import App from '@/App.vue'
 
 const routes = setupLayouts(generatedRoutes)
 
-export const createApp = ViteSSG(
-  // root component
-  App,
-  // vue-router options with ipfs-base
-  { routes, base: createBase() },
-  // function to have custom setups
-  (ctx) => {
-    for (const plugin of config.plugins) {
-      plugin.load(ctx)
-    }
-  },
-  {
-    transformState(state) {
-      return import.meta.env.SSR ? devalue(state) : state
-    }
-  }
-)
+export const createApp = defineApp({
+  lang: 'en',
+  title: 'Origin App',
+  description: 'Origin web3 starter',
+  plugins: [pinia(), mainStore()],
+  app: App,
+  routes
+})
