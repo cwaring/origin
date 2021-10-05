@@ -1,6 +1,9 @@
 import { definePlugin } from '@app-research/origin-vue'
 import pinia from './instance'
 
+// type safe vue mainStore
+// see: https://pinia.esm.dev/
+
 export default definePlugin({
   name: 'pinia',
   load: ({ app, initialState }) => {

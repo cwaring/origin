@@ -15,6 +15,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-# exclude lock files (for testing)
-*-lock.json

@@ -2,22 +2,6 @@
   <router-view />
 </template>
 
-<script lang="ts" setup>
-// import { useHead } from '@vueuse/head'
-
-// const props =
-//   defineProps<{ title: string; description: string; lang: string }>()
-
-// // https://github.com/vueuse/head
-// useHead({
-//   title,
-//   meta: [{ name: 'description', content: description }],
-//   htmlAttrs: {
-//     lang
-//   }
-// })
-</script>
-
 <style>
 #app {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
