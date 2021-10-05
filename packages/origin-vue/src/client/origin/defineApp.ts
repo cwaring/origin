@@ -69,7 +69,7 @@ export function defineApp(
           }
         })
       )
-      !import.meta.env.SSR && ctx.head?.updateDOM()
+      !import.meta?.env?.SSR && ctx.head?.updateDOM()
 
       // install client plugins
       ;(async () => {
@@ -81,7 +81,7 @@ export function defineApp(
     {
       // use devalue for state serialization
       transformState(state) {
-        return import.meta.env.SSR ? devalue(state) : state
+        return import.meta?.env?.SSR ? devalue(state) : state
       }
     }
   )
