@@ -69,7 +69,9 @@ export function defineApp(
           }
         })
       )
-      !import.meta?.env?.SSR && ctx.head?.updateDOM()
+      if (ctx.isClient) {
+        ctx.head?.updateDOM()
+      }
 
       // install client plugins
       ;(async () => {
