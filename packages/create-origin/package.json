@@ -28,7 +28,7 @@
   "author": "cwaring",
   "license": "MIT",
   "dependencies": {
-    "cac": "^6.7.3"
+    "cac": "^6.7.7"
   },
   "devDependencies": {
     "rimraf": "^3.0.2"

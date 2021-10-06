@@ -20,7 +20,7 @@ export const config = defineConfig({
     Components({
       dts: true
     }),
-    Pages(),
+    Pages({ pagesDir: 'src/routes' }),
     Layouts()
   ],
 
@@ -36,7 +36,7 @@ export const config = defineConfig({
   },
 
   optimizeDeps: {
-    include: ['vue', 'vue-router', '@vueuse/core'],
+    include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
     exclude: ['vue-demi']
   }
 })
