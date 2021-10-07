@@ -1,8 +1,10 @@
-import { config } from '@app-research/origin-vue/vite'
+import { defineConfig, origin } from '@app-research/origin-vue/vite'
 
+// extend or modify the default origin vite config
 // https://vitejs.dev/config/
 
-// extend or modify the default config
-// TODO: this will be changed to a defineConfig method in future versions
+// TODO: docs on origin plugin
 
-export default config
+export default defineConfig({
+  plugins: [origin()]
+})
