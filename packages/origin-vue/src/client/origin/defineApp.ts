@@ -44,11 +44,11 @@ export function defineApp(
   routePath?: string | undefined
 ) => Promise<ViteSSGContext<true>> {
   // TODO: include app and routes in the package eventually
-  const { plugins, app, routes, title, description, lang } = appConfig
+  const { App, plugins, routes, title, description, lang } = appConfig
 
   return ViteSSG(
     // root component
-    app,
+    App,
     // vue-router options with ipfs-base
     { routes, base: createBase() },
     // function to have custom setups
