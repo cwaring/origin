@@ -1,6 +1,6 @@
 {
   "name": "@app-research/origin-vue",
-  "version": "0.3.0-beta.11",
+  "version": "0.3.0-beta.12",
   "main": "dist/client/index.js",
   "module": "dist/client/index.js",
   "scripts": {
@@ -54,7 +54,8 @@
   "files": [
     "dist",
     "config",
-    "bin"
+    "bin",
+    "client.d.ts"
   ],
   "peerDependencies": {
     "@app-research/eslint-config": "^0.1.3",

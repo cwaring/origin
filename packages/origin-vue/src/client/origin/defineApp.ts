@@ -25,7 +25,13 @@ interface AppConfig {
    * Client side vue plugins
    */
   plugins: ClientPlugin[]
-  app: Component
+  /**
+   * The root App component
+   */
+  App: Component
+  /**
+   * Generated application routes
+   */
   routes: RouterOptions['routes']
 }
 

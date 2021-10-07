@@ -10,7 +10,8 @@
     "lint": "eslint 'src/**' --fix"
   },
   "devDependencies": {
-    "@app-research/origin-vue": "workspace:*"
+    "@app-research/origin-vue": "workspace:*",
+    "vite-plugin-inspect": "^0.3.8"
   },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {

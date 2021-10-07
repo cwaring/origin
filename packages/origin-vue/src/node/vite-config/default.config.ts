@@ -5,8 +5,46 @@ import Components from 'unplugin-vue-components/vite'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 
+const originConfigRx = /(origin.app.ts)$/
+
+function originApp() {
+  const virtualFileId = 'virtual:origin-app'
+  return {
+    name: 'origin-app',
+    transform(code: string, id: string) {
+      if (originConfigRx.test(id)) {
+        const createApp = code.replace(
+          /^defineApp\(/gm,
+          'export const createApp = defineApp('
+        )
+        return createApp
+      }
+    },
+    resolveId(id: string) {
+      if (id === virtualFileId) {
+        return virtualFileId
+      }
+    },
+    load(id: string) {
+      if (id === virtualFileId) {
+        const setup = `
+import App from '@/App.vue'
+
+import generatedRoutes from 'virtual:generated-pages';
+import { setupLayouts } from 'virtual:generated-layouts';
+const routes = setupLayouts(generatedRoutes);
+
+export { App, routes };
+`
+        return setup
+      }
+    }
+  }
+}
+
 // enable default plugins
 const plugins = [
+  originApp(),
   Vue(),
   Components({
     dts: true
@@ -22,6 +60,7 @@ export function origin(options: OriginPluginOptions = {}): Plugin[] {
   return [
     {
       name: 'origin:config',
+      enforce: 'pre',
       config() {
         return {
           base: '', // left empty to compile into relative paths
