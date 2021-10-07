@@ -45,7 +45,6 @@ export function defineApp(
 ) => Promise<ViteSSGContext<true>> {
   // TODO: include app and routes in the package eventually
   const { App, plugins, routes, title, description, lang } = appConfig
-
   return ViteSSG(
     // root component
     App,
@@ -89,7 +88,7 @@ export function defineApp(
     {
       // use devalue for state serialization
       transformState(state) {
-        return import.meta?.env?.SSR ? devalue(state) : state
+        return import.meta.env.SSR ? devalue(state) : state
       }
     }
   )

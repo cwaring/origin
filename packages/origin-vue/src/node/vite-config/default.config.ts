@@ -28,7 +28,7 @@ function originApp() {
     load(id: string) {
       if (id === virtualFileId) {
         const setup = `
-import App from '@/App.vue'
+import App from '__APP_ROOT__'
 
 import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
@@ -64,6 +64,9 @@ export function origin(options: OriginPluginOptions = {}): Plugin[] {
       config() {
         return {
           base: '', // left empty to compile into relative paths
+          define: {
+            __APP_ROOT__: '@/App.vue'
+          },
           resolve: {
             alias: {
               '@/': `${resolve(process.cwd(), 'src')}/`
