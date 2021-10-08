@@ -38,7 +38,7 @@
     "@vue/server-renderer": "^3.2.19",
     "@vueuse/core": "^6.5.3",
     "@vueuse/head": "^0.5.1",
-    "cac": "^6.7.7",
+    "cac": "^6.7.8",
     "critters": "^0.0.10",
     "ipfs-base": "^1.1.0",
     "pinia": "^2.0.0-rc.12",
