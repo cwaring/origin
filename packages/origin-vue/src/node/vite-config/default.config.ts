@@ -27,14 +27,13 @@ function originApp() {
     },
     load(id: string) {
       if (id === virtualFileId) {
+        // const root = (window as {}).__APP_ROOT__ as string
         const setup = `
-import App from '__APP_ROOT__'
-
 import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
 const routes = setupLayouts(generatedRoutes);
-
-export { App, routes };
+export { default as App } from '~AppRoot'
+export { routes };
 `
         return setup
       }
@@ -53,10 +52,20 @@ const plugins = [
   Layouts()
 ]
 
-interface OriginPluginOptions {}
+interface OriginPluginOptions {
+  /**
+   * Path to the application root, defaults to '@/App.vue'
+   */
+  appRoot: string
+}
 
 // https://vitejs.dev/config/
-export function origin(options: OriginPluginOptions = {}): Plugin[] {
+export function origin(
+  options: OriginPluginOptions = { appRoot: 'src/App.vue' }
+): Plugin[] {
+  // setup default AppRoot
+  const appRoot = `${resolve(process.cwd(), options.appRoot)}`
+
   return [
     {
       name: 'origin:config',
@@ -64,12 +73,10 @@ export function origin(options: OriginPluginOptions = {}): Plugin[] {
       config() {
         return {
           base: '', // left empty to compile into relative paths
-          define: {
-            __APP_ROOT__: '@/App.vue'
-          },
           resolve: {
             alias: {
-              '@/': `${resolve(process.cwd(), 'src')}/`
+              '@/': `${resolve(process.cwd(), 'src')}/`,
+              '~AppRoot': appRoot
             }
           },
           ssgOptions: {
