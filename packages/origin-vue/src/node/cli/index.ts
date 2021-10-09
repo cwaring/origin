@@ -3,6 +3,7 @@
 
 import { spawn } from 'child_process'
 import { cac } from 'cac'
+import { createServer, loadConfigFromFile, mergeConfig, build } from 'vite'
 
 /**
  * Origin cli vite wrapper for core app methods
@@ -19,14 +20,29 @@ cli.command('build', 'Run production build').action((opts) => {
   })
 })
 
-cli.command('dev', 'Run development mode and watch project').action((opts) => {
-  spawn('vite', {
-    stdio: 'inherit',
-    env: { ...process.env, NODE_ENV: 'development' }
-  }).on('error', function (err) {
-    throw err
+cli
+  .command('dev', 'Run development mode and watch project')
+  .action(async (opts) => {
+    const res = await loadConfigFromFile(
+      { mode: 'development', command: 'serve' },
+      undefined,
+      process.cwd()
+    )
+
+    if (res) {
+      const userConfig = await mergeConfig(res.config, {
+        // any valid user config options, plus `mode` and `configFile`
+        configFile: false
+        // root: process.cwd()
+        // server: {
+        //   port: 3000
+        // }
+      })
+      const server = await createServer(userConfig)
+      await server.listen()
+      server.printUrls()
+    }
   })
-})
 
 cli
   .command('preview', 'Serve compiled project output preview')
