@@ -4,8 +4,8 @@
   "description": "CLI to scaffold an origin app",
   "main": "dist/index.js",
   "bin": {
-    "create-origin": "bin/create-origin.js",
-    "coa": "bin/create-origin.js"
+    "create-origin": "./bin/create-origin.js",
+    "coa": "./bin/create-origin.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,6 @@
     "build": "rimraf dist && tsc",
     "dev": "npm run build -- -w --incremental"
   },
-  "author": "cwaring",
-  "license": "MIT",
   "dependencies": {
     "cac": "^6.7.8"
   },
