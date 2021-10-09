@@ -1,0 +1,21 @@
+{
+  "name": "origin-vue-ts",
+  "private": true,
+  "version": "0.3.0-beta.1",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "origin dev",
+    "build": "origin build",
+    "preview": "origin preview",
+    "lint": "eslint 'src/**' --fix"
+  },
+  "devDependencies": {
+    "@app-research/origin-vue": "workspace:*",
+    "vite-plugin-inspect": "^0.3.8"
+  },
+  "prettier": "@app-research/origin-vue/config/prettier",
+  "engines": {
+    "npm": ">=7",
+    "node": ">=14"
+  }
+}

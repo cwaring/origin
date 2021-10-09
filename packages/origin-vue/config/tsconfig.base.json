@@ -5,6 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -12,11 +13,22 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "lib": [
       "esnext",
       "dom",
-      "dom.iterable",
+      "dom.iterable"
     ],
+    "types": [
+      "vite/client",
+      "@app-research/origin-vue/client"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "exclude": [
     "dist",

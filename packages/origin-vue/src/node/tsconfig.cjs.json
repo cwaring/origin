@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "../../dist/node/cjs",
+    "module": "commonjs",
+    "target": "es2020",
+    "types": [
+      "node",
+      "vite-ssg"
+    ]
+  }
+}

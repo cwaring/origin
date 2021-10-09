@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": [
+      "esnext"
+    ],
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+  },
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "create-origin",
+  "version": "0.3.0-beta.1",
+  "description": "CLI to scaffold an origin app",
+  "main": "dist/index.js",
+  "bin": {
+    "create-origin": "./bin/create-origin.js",
+    "coa": "./bin/create-origin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/application-research/origin.git",
+    "directory": "packages/create-origin"
+  },
+  "bugs": {
+    "url": "https://github.com/application-research/origin/issues"
+  },
+  "homepage": "https://github.com/application-research/origin/tree/main/packages/create-origin#readme",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "dev": "npm run build -- -w --incremental"
+  },
+  "dependencies": {
+    "cac": "^6.7.8"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
+}

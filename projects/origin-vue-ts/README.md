@@ -1,13 +1,14 @@
-<img src='./projects/origin-vue-ts/src/assets/origin-logo.svg' width='128' height='128' alt='origin' />
+<img src='./src/assets/origin-logo.svg' width='128' height='128' alt='origin' />
 
 # Origin
 
 _The fast web3 application toolkit ⚡️_
 
-### Quick Start
-👉 Head over to [origin-playground](https://github.com/application-research/origin-playground) for an example app template.
 
-**status: alpha warning 🐉**
+[![node compatility](https://img.shields.io/node/v/vite.svg)](https://nodejs.org/en/about/releases/)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
+***status: WIP alpha warning 🐉***
 ## Motivation
 Building modern web3 applications should be simple, elegant and fast. **Origin** is an attempt to solve that problem with a focus to promote best practices in a lightweight, opinionated base configuration.
 
@@ -28,7 +29,7 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 - Metadata rendering with [`@vueuse/head`](https://github.com/vueuse/head)
 
 ## Origin Vue Plugins
-- [Pinia](https://pinia.esm.dev/) store with SSG state serialization [`origin-plugin-pinia`]
+- [Pinia](https://pinia.esm.dev/) store with SSG state serialization [`origin-plugin-pinia`](./src/plugins/pinia/index.ts)
 
 ## Included plugins
 - VueUse utility library [`@vueuse/core`](https://vueuse.org/)
