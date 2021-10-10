@@ -7,7 +7,7 @@ _The fast web3 application toolkit ⚡️_
 ### Quick Start
 👉 Head over to [origin-playground](https://github.com/application-research/origin-playground) for an example app template.
 
-**status: alpha warning 🐉**
+**status: alpha warning, API & project structure will change 🐉**
 ## Motivation
 Building modern web3 applications should be simple, elegant and fast. **Origin** is an attempt to solve that problem with a focus to promote best practices in a lightweight, opinionated base configuration.
 
@@ -30,34 +30,14 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 ## Origin Vue Plugins
 - [Pinia](https://pinia.esm.dev/) store with SSG state serialization [`origin-plugin-pinia`]
 
-## Included plugins
-- VueUse utility library [`@vueuse/core`](https://vueuse.org/)
+## Included Dependencies
+- VueUse Utilities [`@vueuse/core`](https://vueuse.org/)
+- VueUse Head - Document <head> manager [`@vueuse/head`](https://vueuse.org/)
+
+## Contributing
+- This is a [pnpm](https://pnpm.io/) monorepo, development requires this package manager and not npm/yarn.
+
+## Credits
+- A huge thanks to all of the contributors behind [Vite](https://github.com/vitejs/vite), [Vue 3](https://github.com/vuejs/vue-next) and related projects, kudos for making it easier and more enjoyable to build next-gen internet, this wouldn't be possible without your efforts 😎
+- Plus of course [IPFS](https://github.com/ipfs/go-ipfs), [Filecoin](https://github.com/filecoin-project) & [Protocol Labs](https://protocol.ai/) for setting the stage for a more open and secure decentralised web future.
 ---
-
-## Development
-
-```bash
-# 0: install deps
-npm i
-# 1: start development mode
-npm start
-```
-
-```bash
-# production build /dist
-npm run build
-```
-
-```bash
-# preview production build /dist
-npm run serve
-```
-### Recommended Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) + [Vue devtools (beta)](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg)
-
-This combo enables IDE support for [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) which is included in Vue > v3.1.4. However, be sure to disable Vetur if you have it installed as these extensions conflict.
-
-### Type Support For `.vue` Imports in TS
-
-If you are using Volar the default configuration included in Origin enables prop types for `.vue` imports. To enable Volar takeover mode you will need to follow [some additional steps](https://github.com/johnsoncodehk/volar/discussions/471).
