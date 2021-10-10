@@ -40,4 +40,3 @@ We will extend the [vite/rollup plugin architecture](https://vitejs.dev/guide/ap
 ## Credits
 - A huge thanks to all of the contributors behind [Vite](https://github.com/vitejs/vite), [Vue 3](https://github.com/vuejs/vue-next) and related projects, kudos for making it easier and more enjoyable to build next-gen internet, this wouldn't be possible without your efforts 😎
 - Plus of course [IPFS](https://github.com/ipfs/go-ipfs), [Filecoin](https://github.com/filecoin-project) & [Protocol Labs](https://protocol.ai/) for setting the stage for a more open and secure decentralised web future.
----
