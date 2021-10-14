@@ -19,7 +19,8 @@
       "import": "./dist/node/esm/vite-config/index.js"
     },
     "./config/tsconfig.base": "./config/tsconfig.base.json",
-    "./config/prettier": "./config/prettier.json"
+    "./config/prettier": "./config/prettier.json",
+    "./package.json": "./package.json"
   },
   "typesVersions": {
     "*": {
@@ -38,10 +39,10 @@
     "@vue/server-renderer": "^3.2.20",
     "@vueuse/core": "^6.5.3",
     "@vueuse/head": "^0.5.1",
-    "cac": "^6.7.8",
+    "cac": "^6.7.11",
     "critters": "^0.0.10",
     "ipfs-base": "^1.1.0",
-    "pinia": "^2.0.0-rc.12",
+    "pinia": "^2.0.0-rc.13",
     "unplugin-vue-components": "^0.15.6",
     "vite": "^2.6.7",
     "vite-plugin-pages": "^0.18.1",
@@ -49,7 +50,7 @@
     "vite-ssg": "^0.15.4",
     "vue": "^3.2.20",
     "vue-router": "^4.0.11",
-    "vue-tsc": "^0.28.2"
+    "vue-tsc": "^0.28.3"
   },
   "files": [
     "dist",
@@ -64,9 +65,10 @@
     "typescript": "^4.4.3"
   },
   "devDependencies": {
+    "chalk": "^4.1.2",
     "eslint": "^7.32.0",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.4"
   }
 }
