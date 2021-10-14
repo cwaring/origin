@@ -1,15 +1,19 @@
-/* eslint-disable no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 import { spawn } from 'child_process'
 import { cac } from 'cac'
-import { createServer, loadConfigFromFile, mergeConfig, build } from 'vite'
+import { createServer, createLogger } from 'vite'
+import chalk from 'chalk'
 
 /**
  * Origin cli vite wrapper for core app methods
  * Allows control for rendering and build steps
  */
 const cli = cac('origin')
+const __originVersion = require('@app-research/origin-vue/package.json').version
+const __viteVersion = require('vite/package.json').version
+// @ts-expect-error node global
+global.__vite_start_time = Date.now()
 
 cli.command('build', 'Run production build').action((opts) => {
   spawn('vite-ssg', ['build'], {
@@ -23,24 +27,35 @@ cli.command('build', 'Run production build').action((opts) => {
 cli
   .command('dev', 'Run development mode and watch project')
   .action(async (opts) => {
-    const res = await loadConfigFromFile(
-      { mode: 'development', command: 'serve' },
-      undefined,
-      process.cwd()
-    )
-
-    if (res) {
-      const userConfig = await mergeConfig(res.config, {
-        // any valid user config options, plus `mode` and `configFile`
-        configFile: false
-        // root: process.cwd()
-        // server: {
-        //   port: 3000
-        // }
-      })
-      const server = await createServer(userConfig)
+    try {
+      const server = await createServer()
+      const info = server.config.logger.info
       await server.listen()
+
+      info(
+        chalk.cyan(`\n  origin v${__originVersion}`) +
+          chalk.green(`\n  vite v${__viteVersion} dev server running at:\n`),
+        {
+          clear: !server.config.logger.hasWarned
+        }
+      )
+
       server.printUrls()
+
+      // @ts-expect-error node global
+      if (global.__vite_start_time) {
+        // @ts-expect-error node global
+        const startupDuration = Date.now() - global.__vite_start_time
+        info(`\n  ${chalk.cyan(`ready in ${Math.ceil(startupDuration)}ms.`)}\n`)
+      }
+    } catch (e) {
+      createLogger(opts.logLevel).error(
+        // @ts-expect-error e is unknown
+        chalk.red(`error when starting dev server:\n${e.stack}`),
+        // @ts-expect-error e is unknown
+        { error: e }
+      )
+      process.exit(1)
     }
   })
 
@@ -56,5 +71,5 @@ cli
   })
 
 cli.help()
-// cli.version(require('../../../package.json').version)
+cli.version(__originVersion)
 cli.parse()
