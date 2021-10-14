@@ -2,18 +2,28 @@
 
 import { spawn } from 'child_process'
 import { cac } from 'cac'
-import { createServer, createLogger } from 'vite'
+import {
+  createServer,
+  createLogger,
+  resolveConfig,
+  preview,
+  printHttpServerUrls
+} from 'vite'
 import chalk from 'chalk'
 
 /**
  * Origin cli vite wrapper for core app methods
  * Allows control for rendering and build steps
  */
-const cli = cac('origin')
 const __originVersion = require('@app-research/origin-vue/package.json').version
 const __viteVersion = require('vite/package.json').version
-// @ts-expect-error node global
+
+// @ts-expect-error setup vite time global
 global.__vite_start_time = Date.now()
+
+const cli = cac('origin')
+
+cli.option('-l, --logLevel <level>', `[string] info | warn | error | silent`)
 
 cli.command('build', 'Run production build').action((opts) => {
   spawn('vite-ssg', ['build'], {
@@ -62,12 +72,21 @@ cli
 cli
   .command('preview', 'Serve compiled project output preview')
   .option('--host [host]', `[string] specify hostname`)
-  .action((opts) => {
-    spawn('vite', ['preview', opts.host ? `--host` : ''], {
-      stdio: 'inherit'
-    }).on('error', function (err) {
-      throw err
-    })
+  .action(async (opts) => {
+    try {
+      const config = await resolveConfig({}, 'serve', 'production')
+      const server = await preview(config, {})
+
+      printHttpServerUrls(server, config)
+    } catch (e) {
+      createLogger(opts.logLevel).error(
+        // @ts-expect-error e is unknown
+        chalk.red(`error when starting preview server:\n${e.stack}`),
+        // @ts-expect-error e is unknown
+        { error: e }
+      )
+      process.exit(1)
+    }
   })
 
 cli.help()
