@@ -44,13 +44,13 @@
     "ipfs-base": "^1.1.0",
     "pinia": "^2.0.0-rc.13",
     "unplugin-vue-components": "^0.15.6",
-    "vite": "^2.6.7",
+    "vite": "^2.6.9",
     "vite-plugin-pages": "^0.18.1",
     "vite-plugin-vue-layouts": "^0.5.0",
     "vite-ssg": "^0.15.4",
     "vue": "^3.2.20",
     "vue-router": "^4.0.12",
-    "vue-tsc": "^0.28.6"
+    "vue-tsc": "^0.28.7"
   },
   "files": [
     "dist",
