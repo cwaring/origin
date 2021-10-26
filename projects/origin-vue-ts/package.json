@@ -7,7 +7,8 @@
     "dev": "origin dev",
     "build": "origin build",
     "preview": "origin preview",
-    "lint": "eslint 'src/**' --fix"
+    "lint": "eslint 'src/**' --fix",
+    "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
     "@app-research/origin-vue": "workspace:*",

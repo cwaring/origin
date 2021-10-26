@@ -1,4 +1,4 @@
-import { Component, ref } from 'vue'
+import { DefineComponent, ref } from 'vue'
 import devalue from '@nuxt/devalue'
 import { RouterOptions, ViteSSG, ViteSSGContext } from 'vite-ssg'
 import { createBase } from 'ipfs-base'
@@ -28,7 +28,8 @@ interface AppConfig {
   /**
    * The root App component
    */
-  App: Component
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
+  App: DefineComponent<{}, {}, any>
   /**
    * Generated application routes
    */
