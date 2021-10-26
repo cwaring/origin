@@ -92,7 +92,7 @@ export function origin(
 
           optimizeDeps: {
             include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
-            exclude: ['@app-research/origin-vue', '@nuxt/devalue']
+            exclude: ['@app-research/origin-vue', 'vue-demi', '@nuxt/devalue']
           }
         }
       }
