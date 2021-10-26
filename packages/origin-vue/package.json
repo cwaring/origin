@@ -9,7 +9,7 @@
     "build:esm": "tsc -p src/client && tsc -p src/node",
     "build:cjs": "tsc -p src/node/tsconfig.cjs.json",
     "prepublishOnly": "npm run build",
-    "release": "standard-version -t origin-vue@ --path . -p beta --dry-run",
+    "release": "standard-version -t origin-vue@ --path . -p beta",
     "publish": "git push --follow-tags origin main && pnpm publish --tag beta"
   },
   "exports": {
