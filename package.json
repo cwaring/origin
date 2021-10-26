@@ -2,7 +2,8 @@
   "name": "origin-monorepo",
   "private": true,
   "scripts": {
-    "dev": "pnpm -r --parallel run dev --filter ./packages"
+    "dev": "pnpm -r --parallel run dev --filter ./packages",
+    "release": "pnpm -r release --filter ./packages"
   },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {
@@ -14,6 +15,7 @@
     "@types/node": "^16.11.6",
     "eslint": "^8.1.0",
     "prettier": "^2.4.1",
+    "standard-version": "^9.3.2",
     "typescript": "^4.4.4"
   }
 }

@@ -8,7 +8,9 @@
     "build": "rimraf dist && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc -p src/client && tsc -p src/node",
     "build:cjs": "tsc -p src/node/tsconfig.cjs.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "standard-version -t origin-vue@ --path . -p beta --dry-run",
+    "publish": "git push --follow-tags origin main && pnpm publish --tag beta"
   },
   "exports": {
     ".": {
