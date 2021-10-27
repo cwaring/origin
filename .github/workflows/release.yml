@@ -11,12 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
     
-      - name: setup node
+      - name: Setup node
         uses: actions/setup-node@v2
         with:
           node-version: '16'
 
-      - name: setup pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 6.19.1
@@ -27,10 +27,10 @@ jobs:
         # env:
         #   NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     
-      - name: generate release body
-        run: pnpm dlx extract-changelog-release ./packages/origin-vue/CHANGELOG.md > RELEASE_BODY.md
+      - name: Generate release body
+        run: pnpm -s dlx extract-changelog-release ./packages/origin-vue/CHANGELOG.md > RELEASE_BODY.md
 
-      - name: create github release
+      - name: Create github release
         uses: ncipollo/release-action@v1
         with:
           bodyFile: "RELEASE_BODY.md"
