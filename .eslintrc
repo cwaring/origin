@@ -1,3 +1,46 @@
 {
-    "extends": "@app-research"
+  "extends": "@app-research",
+  "overrides": [
+    {
+      "files": [
+        "package.json"
+      ],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "jsonc/sort-keys": [
+          "error",
+          {
+            "pathPattern": "^$",
+            "order": [
+              "name",
+              "version",
+              "description",
+              "keywords",
+              "license",
+              "repository",
+              "author",
+              "funding",
+              "exports",
+              "main",
+              "module",
+              "unpkg",
+              "type",
+              "types",
+              "typesVersions",
+              "bin",
+              "files",
+              "scripts",
+              "husky",
+              "lint-staged",
+              "dependencies",
+              "peerDependencies",
+              "peerDependenciesMeta",
+              "devDependencies",
+              "eslintConfig"
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
