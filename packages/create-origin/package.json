@@ -2,11 +2,7 @@
   "name": "create-origin",
   "version": "0.3.0-beta.1",
   "description": "CLI to scaffold an origin app",
-  "main": "dist/index.js",
-  "bin": {
-    "create-origin": "./bin/create-origin.js",
-    "coa": "./bin/create-origin.js"
-  },
+  "homepage": "https://github.com/application-research/origin/tree/main/packages/create-origin#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/application-research/origin.git",
@@ -15,7 +11,11 @@
   "bugs": {
     "url": "https://github.com/application-research/origin/issues"
   },
-  "homepage": "https://github.com/application-research/origin/tree/main/packages/create-origin#readme",
+  "main": "dist/index.js",
+  "bin": {
+    "create-origin": "./bin/create-origin.js",
+    "coa": "./bin/create-origin.js"
+  },
   "files": [
     "dist",
     "bin"
