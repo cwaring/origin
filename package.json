@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "pnpm -r --parallel run dev --filter ./packages",
-    "release": "pnpm -r release --filter ./packages"
+    "release": "pnpm -r --filter ./packages release",
+    "release:dry": "pnpm release -- -- --dry-run",
+    "release:publish": "git push --follow-tags origin main",
+    "release:exec": "pnpm -r --filter ./packages exec -- pnpm exec standard-version --path . -p beta --dry-run"
   },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {

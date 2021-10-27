@@ -36,9 +36,8 @@
     "build:cjs": "tsc -p src/node/tsconfig.cjs.json",
     "build:esm": "tsc -p src/client && tsc -p src/node",
     "dev": "npm run build:esm -- -w --incremental & npm run build:cjs -- -w --incremental",
-    "prepublishOnly": "npm run build",
-    "publish": "git push --follow-tags origin main && pnpm publish --tag beta",
-    "release": "standard-version --path . -p beta --dry-run"
+    "prerelease": "npm run build",
+    "release": "standard-version --path . -p beta"
   },
   "dependencies": {
     "@nuxt/devalue": "^2.0.0",
