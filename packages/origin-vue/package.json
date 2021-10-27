@@ -50,12 +50,12 @@
     "pinia": "^2.0.0",
     "unplugin-vue-components": "^0.16.0",
     "vite": "^2.6.13",
-    "vite-plugin-pages": "^0.18.1",
+    "vite-plugin-pages": "^0.18.2",
     "vite-plugin-vue-layouts": "^0.5.0",
     "vite-ssg": "^0.15.5",
     "vue": "^3.2.20",
     "vue-router": "^4.0.12",
-    "vue-tsc": "^0.28.9"
+    "vue-tsc": "^0.28.10"
   },
   "peerDependencies": {
     "@app-research/eslint-config": "^0.1.5"
