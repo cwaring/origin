@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0-beta.17](https://github.com/application-research/origin/compare/v0.3.0-beta.16...v0.3.0-beta.17) (2021-11-18)
+
+
+### Bug Fixes
+
+* eslint updates ([8b696a6](https://github.com/application-research/origin/commit/8b696a62ca8ae3e8c4b96463922fa18e4672cedc))
+
 ## 0.3.0-beta.16 (2021-10-27)
 
 

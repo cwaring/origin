@@ -1,6 +1,6 @@
 {
   "name": "@app-research/origin-vue",
-  "version": "0.3.0-beta.16",
+  "version": "0.3.0-beta.17",
   "exports": {
     ".": {
       "import": "./dist/client/index.js"
