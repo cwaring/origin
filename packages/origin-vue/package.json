@@ -43,7 +43,7 @@
     "@nuxt/devalue": "^2.0.0",
     "@vitejs/plugin-vue": "^1.9.4",
     "@vueuse/core": "^6.9.1",
-    "@vueuse/head": "^0.6.0",
+    "@vueuse/head": "^0.7.2",
     "cac": "^6.7.12",
     "critters": "^0.0.14",
     "ipfs-base": "^1.1.0",
@@ -52,7 +52,7 @@
     "vite": "^2.6.14",
     "vite-plugin-pages": "^0.18.2",
     "vite-plugin-vue-layouts": "^0.5.0",
-    "vite-ssg": "^0.15.6",
+    "vite-ssg": "^0.16.1",
     "vue": "^3.2.22",
     "vue-router": "^4.0.12",
     "vue-tsc": "^0.29.5"
