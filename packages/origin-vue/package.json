@@ -58,7 +58,7 @@
     "vue-tsc": "^0.29.5"
   },
   "peerDependencies": {
-    "@app-research/eslint-config": "^0.1.5"
+    "@app-research/eslint-config": "^0.1.6"
   },
   "devDependencies": {
     "chalk": "^4.1.2",

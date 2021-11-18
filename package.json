@@ -13,10 +13,10 @@
     "node": ">=16"
   },
   "devDependencies": {
-    "@app-research/eslint-config": "^0.1.5",
+    "@app-research/eslint-config": "^0.1.6",
     "@app-research/origin-vue": "workspace:*",
     "@types/node": "^16.11.7",
-    "eslint": "^8.2.0",
+    "eslint": "^7.32.0",
     "prettier": "^2.4.1",
     "standard-version": "^9.3.2",
     "typescript": "^4.5.2"
