@@ -2,13 +2,7 @@
 
 import { spawn } from 'child_process'
 import { cac } from 'cac'
-import {
-  createServer,
-  createLogger,
-  resolveConfig,
-  preview,
-  printHttpServerUrls
-} from 'vite'
+import { createServer, createLogger, preview } from 'vite'
 import chalk from 'chalk'
 
 /**
@@ -39,8 +33,13 @@ cli
   .action(async (opts) => {
     try {
       const server = await createServer()
-      const info = server.config.logger.info
+
+      if (!server.httpServer) {
+        throw new Error('HTTP server not started')
+      }
+
       await server.listen()
+      const info = server.config.logger.info
 
       info(
         chalk.cyan(`\n  origin v${__originVersion}`) +
@@ -74,10 +73,14 @@ cli
   .option('--host [host]', `[string] specify hostname`)
   .action(async (opts) => {
     try {
-      const config = await resolveConfig({}, 'serve', 'production')
-      const server = await preview(config, {})
+      const previewServer = await preview({
+        preview: {
+          port: 8080,
+          open: true
+        }
+      })
 
-      printHttpServerUrls(server, config)
+      previewServer.printUrls()
     } catch (e) {
       createLogger(opts.logLevel).error(
         // @ts-expect-error e is unknown
