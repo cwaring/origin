@@ -3,6 +3,9 @@ node_modules
 dist
 dist-ssr
 
+#ssg temp
+.vite-ssg-temp
+
 # generated global components for volar
 components.d.ts
 
