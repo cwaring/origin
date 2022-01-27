@@ -3,7 +3,7 @@
 import { spawn } from 'child_process'
 import { cac } from 'cac'
 import { createServer, createLogger, preview } from 'vite'
-import chalk from 'chalk'
+import colors from 'picocolors'
 
 /**
  * Origin cli vite wrapper for core app methods
@@ -42,8 +42,8 @@ cli
       const info = server.config.logger.info
 
       info(
-        chalk.cyan(`\n  origin v${__originVersion}`) +
-          chalk.green(`\n  vite v${__viteVersion} dev server running at:\n`),
+        colors.cyan(`\n  origin v${__originVersion}`) +
+          colors.green(`\n  vite v${__viteVersion} dev server running at:\n`),
         {
           clear: !server.config.logger.hasWarned
         }
@@ -55,12 +55,14 @@ cli
       if (global.__vite_start_time) {
         // @ts-expect-error node global
         const startupDuration = Date.now() - global.__vite_start_time
-        info(`\n  ${chalk.cyan(`ready in ${Math.ceil(startupDuration)}ms.`)}\n`)
+        info(
+          `\n  ${colors.cyan(`ready in ${Math.ceil(startupDuration)}ms.`)}\n`
+        )
       }
     } catch (e) {
       createLogger(opts.logLevel).error(
         // @ts-expect-error e is unknown
-        chalk.red(`error when starting dev server:\n${e.stack}`),
+        colors.red(`error when starting dev server:\n${e.stack}`),
         // @ts-expect-error e is unknown
         { error: e }
       )
@@ -84,7 +86,7 @@ cli
     } catch (e) {
       createLogger(opts.logLevel).error(
         // @ts-expect-error e is unknown
-        chalk.red(`error when starting preview server:\n${e.stack}`),
+        colors.red(`error when starting preview server:\n${e.stack}`),
         // @ts-expect-error e is unknown
         { error: e }
       )
