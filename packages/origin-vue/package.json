@@ -41,21 +41,21 @@
   },
   "dependencies": {
     "@nuxt/devalue": "^2.0.0",
-    "@vitejs/plugin-vue": "^2.1.0",
-    "@vueuse/core": "^7.5.5",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vueuse/core": "^7.6.1",
     "@vueuse/head": "^0.7.5",
     "cac": "^6.7.12",
     "critters": "^0.0.16",
     "ipfs-base": "^1.1.0",
-    "pinia": "^2.0.9",
-    "unplugin-vue-components": "^0.17.15",
-    "vite": "^2.7.13",
-    "vite-plugin-pages": "^0.20.0",
+    "pinia": "^2.0.11",
+    "unplugin-vue-components": "^0.17.18",
+    "vite": "^2.8.0",
+    "vite-plugin-pages": "^0.20.2",
     "vite-plugin-vue-layouts": "^0.5.0",
-    "vite-ssg": "^0.17.9",
-    "vue": "^3.2.29",
+    "vite-ssg": "^0.17.10",
+    "vue": "^3.2.30",
     "vue-router": "^4.0.12",
-    "vue-tsc": "^0.31.1"
+    "vue-tsc": "^0.31.2"
   },
   "peerDependencies": {
     "@app-research/eslint-config": "^0.1.6"

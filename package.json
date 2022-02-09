@@ -15,7 +15,7 @@
   "devDependencies": {
     "@app-research/eslint-config": "^0.1.6",
     "@app-research/origin-vue": "workspace:*",
-    "@types/node": "^16.11.21",
+    "@types/node": "^16.11.22",
     "eslint": "^7.32.0",
     "prettier": "^2.5.1",
     "standard-version": "^9.3.2",
