@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@app-research/origin-vue": "workspace:*",
-    "vite-plugin-inspect": "^0.3.13"
+    "vite-plugin-inspect": "^0.4.3"
   },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {

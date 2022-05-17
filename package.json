@@ -1,12 +1,13 @@
 {
   "name": "origin-monorepo",
   "private": true,
+  "packageManager": "pnpm@7.1.0",
   "scripts": {
-    "dev": "pnpm -r --parallel run dev --filter ./packages",
-    "release": "pnpm -r --filter ./packages release",
+    "dev": "pnpm --filter './packages/**' -r --parallel run dev",
+    "release": "pnpm --filter './packages/**' -r release",
     "release:dry": "pnpm release -- -- --dry-run",
     "release:publish": "git push --follow-tags origin main",
-    "release:exec": "pnpm -r --filter ./packages exec -- pnpm exec standard-version --path . -p beta --dry-run"
+    "release:exec": "pnpm -r --filter './packages/**' exec -- pnpm exec standard-version --path . -p beta --dry-run"
   },
   "prettier": "@app-research/origin-vue/config/prettier",
   "engines": {
@@ -15,10 +16,10 @@
   "devDependencies": {
     "@app-research/eslint-config": "^0.1.6",
     "@app-research/origin-vue": "workspace:*",
-    "@types/node": "^16.11.22",
-    "eslint": "^7.32.0",
-    "prettier": "^2.5.1",
-    "standard-version": "^9.3.2",
-    "typescript": "^4.5.5"
+    "@types/node": "^17.0.34",
+    "eslint": "^8.15.0",
+    "prettier": "^2.6.2",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.6.4"
   }
 }

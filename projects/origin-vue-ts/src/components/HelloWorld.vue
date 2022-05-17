@@ -5,11 +5,15 @@
     Recommended setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+    <a
+      href="https://marketplace.visualstudio.com/items?itemName=Vue.volar"
+      target="_blank"
+      >Volar</a
+    >
     +
     <a
-      href="https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg"
-      >Vue devtools (beta)</a
+      href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd"
+      >Vue devtools</a
     >
   </p>
 
